@@ -1,0 +1,7 @@
+<map id="sim::destroy" name="sim::destroy">
+<area shape="rect" id="Node000001" title="Destroy simulation resources." alt="" coords="133,31,228,56"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Program entry point." alt="" coords="20,5,71,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,35,71,25,72,20,120,29"/>
+<area shape="rect" id="Node000003" href="$classsim.html#a288d45b6c6ee57bca1ac2306aceba1b8" title="Destroy the simulation object." alt="" coords="5,55,85,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="120,57,86,63,85,58,119,51"/>
+</map>

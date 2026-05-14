@@ -1,0 +1,185 @@
+\doxysection{src/queue.cpp File Reference}
+\hypertarget{queue_8cpp}{}\label{queue_8cpp}\index{src/queue.cpp@{src/queue.cpp}}
+
+
+Circular queue implementation for byte-\/based data storage.  
+
+
+{\ttfamily \#include "{}queue.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for queue.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{queue_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{queue_8cpp_a582391f0b9f7d1888fb0984d0c3dcd9f}{enqueue}} (\mbox{\hyperlink{structqueue__t}{queue\+\_\+t}} \texorpdfstring{$\ast$}{*}queue, unsigned char \texorpdfstring{$\ast$}{*}buffer, int size)
+\begin{DoxyCompactList}\small\item\em Add data to the back of the queue. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{queue_8cpp_a82526b8007d9a7ee8d6fc660a4170684}{enqueue\+\_\+front}} (\mbox{\hyperlink{structqueue__t}{queue\+\_\+t}} \texorpdfstring{$\ast$}{*}queue, unsigned char \texorpdfstring{$\ast$}{*}buffer, int size)
+\begin{DoxyCompactList}\small\item\em Add data to the front of the queue. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{queue_8cpp_a56fbdf37b01e0a5787a9654c04dca6fe}{dequeue}} (\mbox{\hyperlink{structqueue__t}{queue\+\_\+t}} \texorpdfstring{$\ast$}{*}queue, unsigned char \texorpdfstring{$\ast$}{*}buffer, int size)
+\begin{DoxyCompactList}\small\item\em Remove data from the front of the queue. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{queue_8cpp_a9d0efb861861c451c0e00661807a38d3}{dequeue\+\_\+peek}} (\mbox{\hyperlink{structqueue__t}{queue\+\_\+t}} \texorpdfstring{$\ast$}{*}queue, unsigned char \texorpdfstring{$\ast$}{*}buffer, int size)
+\begin{DoxyCompactList}\small\item\em Peek at queue data without removing it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{queue_8cpp_af5bc88810b033ff91a00e9ecffd2b356}{print\+\_\+queue}} (\mbox{\hyperlink{structqueue__t}{queue\+\_\+t}} \texorpdfstring{$\ast$}{*}queue)
+\begin{DoxyCompactList}\small\item\em Print the current queue contents and state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Circular queue implementation for byte-\/based data storage. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{queue_8cpp_a56fbdf37b01e0a5787a9654c04dca6fe}\index{queue.cpp@{queue.cpp}!dequeue@{dequeue}}
+\index{dequeue@{dequeue}!queue.cpp@{queue.cpp}}
+\doxysubsubsection{\texorpdfstring{dequeue()}{dequeue()}}
+{\footnotesize\ttfamily \label{queue_8cpp_a56fbdf37b01e0a5787a9654c04dca6fe} 
+int dequeue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqueue__t}{queue\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{queue}{, }\item[{unsigned char \texorpdfstring{$\ast$}{*}}]{buffer}{, }\item[{int}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Remove data from the front of the queue. 
+
+Copies bytes from the queue into the destination buffer and advances the queue head position.
+
+Removed queue entries are overwritten with 255 for debugging visibility.
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & Pointer to queue structure. \\
+\hline
+{\em buffer} & Pointer to destination buffer. \\
+\hline
+{\em size} & Maximum number of bytes to dequeue.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of bytes successfully dequeued. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{queue_8cpp_a56fbdf37b01e0a5787a9654c04dca6fe_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{queue_8cpp_a9d0efb861861c451c0e00661807a38d3}\index{queue.cpp@{queue.cpp}!dequeue\_peek@{dequeue\_peek}}
+\index{dequeue\_peek@{dequeue\_peek}!queue.cpp@{queue.cpp}}
+\doxysubsubsection{\texorpdfstring{dequeue\_peek()}{dequeue\_peek()}}
+{\footnotesize\ttfamily \label{queue_8cpp_a9d0efb861861c451c0e00661807a38d3} 
+int dequeue\+\_\+peek (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqueue__t}{queue\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{queue}{, }\item[{unsigned char \texorpdfstring{$\ast$}{*}}]{buffer}{, }\item[{int}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Peek at queue data without removing it. 
+
+Copies bytes from the queue into the destination buffer without modifying the queue state, head pointer, or queue size.
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & Pointer to queue structure. \\
+\hline
+{\em buffer} & Pointer to destination buffer. \\
+\hline
+{\em size} & Maximum number of bytes to peek.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of bytes successfully copied. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{queue_8cpp_a9d0efb861861c451c0e00661807a38d3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{queue_8cpp_a582391f0b9f7d1888fb0984d0c3dcd9f}\index{queue.cpp@{queue.cpp}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!queue.cpp@{queue.cpp}}
+\doxysubsubsection{\texorpdfstring{enqueue()}{enqueue()}}
+{\footnotesize\ttfamily \label{queue_8cpp_a582391f0b9f7d1888fb0984d0c3dcd9f} 
+int enqueue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqueue__t}{queue\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{queue}{, }\item[{unsigned char \texorpdfstring{$\ast$}{*}}]{buffer}{, }\item[{int}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Add data to the back of the queue. 
+
+Inserts bytes from the provided buffer into the queue tail until either all data is inserted or the queue becomes full.
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & Pointer to queue structure. \\
+\hline
+{\em buffer} & Pointer to source data buffer. \\
+\hline
+{\em size} & Number of bytes to enqueue.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of bytes successfully enqueued. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{queue_8cpp_a582391f0b9f7d1888fb0984d0c3dcd9f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{queue_8cpp_a82526b8007d9a7ee8d6fc660a4170684}\index{queue.cpp@{queue.cpp}!enqueue\_front@{enqueue\_front}}
+\index{enqueue\_front@{enqueue\_front}!queue.cpp@{queue.cpp}}
+\doxysubsubsection{\texorpdfstring{enqueue\_front()}{enqueue\_front()}}
+{\footnotesize\ttfamily \label{queue_8cpp_a82526b8007d9a7ee8d6fc660a4170684} 
+int enqueue\+\_\+front (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqueue__t}{queue\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{queue}{, }\item[{unsigned char \texorpdfstring{$\ast$}{*}}]{buffer}{, }\item[{int}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Add data to the front of the queue. 
+
+Inserts bytes from the provided buffer into the queue head in reverse order so that the original ordering is preserved when dequeued.
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & Pointer to queue structure. \\
+\hline
+{\em buffer} & Pointer to source data buffer. \\
+\hline
+{\em size} & Number of bytes to enqueue.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of bytes successfully enqueued. 
+\end{DoxyReturn}
+\Hypertarget{queue_8cpp_af5bc88810b033ff91a00e9ecffd2b356}\index{queue.cpp@{queue.cpp}!print\_queue@{print\_queue}}
+\index{print\_queue@{print\_queue}!queue.cpp@{queue.cpp}}
+\doxysubsubsection{\texorpdfstring{print\_queue()}{print\_queue()}}
+{\footnotesize\ttfamily \label{queue_8cpp_af5bc88810b033ff91a00e9ecffd2b356} 
+void print\+\_\+queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqueue__t}{queue\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{queue}{}\end{DoxyParamCaption})}
+
+
+
+Print the current queue contents and state. 
+
+Displays all queue entries in logical order starting from the queue head, followed by queue metadata including head index, tail index, and current size.
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & Pointer to queue structure. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{queue_8cpp_af5bc88810b033ff91a00e9ecffd2b356_icgraph}
+\end{center}
+\end{figure}

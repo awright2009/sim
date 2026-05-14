@@ -1,0 +1,225 @@
+\doxysection{sim Class Reference}
+\hypertarget{classsim}{}\label{classsim}\index{sim@{sim}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsim_a78390ab37b6e55a744705c44d132dbbd}{sim}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new simulation object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsim_a288d45b6c6ee57bca1ac2306aceba1b8}{\texorpdfstring{$\sim$}{\string~}sim}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the simulation object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsim_a9fcfcbb706cd13165039d44a6122fba7}{init}} (const \mbox{\hyperlink{structvehicle__data__t}{vehicle\+\_\+data\+\_\+t}} \texorpdfstring{$\ast$}{*}types, int num\+\_\+type, \mbox{\hyperlink{structstats__t}{stats\+\_\+t}} \texorpdfstring{$\ast$}{*}stats, int num\+\_\+stat, int num\+\_\+charger)
+\begin{DoxyCompactList}\small\item\em Initialize the simulation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsim_a6cf19bf06affe3e5639597f9c3e2d95e}{step}} ()
+\begin{DoxyCompactList}\small\item\em Execute one simulation step. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsim_ab45dcd43dfcffda3e9792a6ecbd38763}{step\+\_\+airborne}} (int vehicle)
+\begin{DoxyCompactList}\small\item\em Process one airborne simulation step for a vehicle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsim_a59fa98b8915d103611ff25ebd8595c4e}{step\+\_\+charging}} (int vehicle)
+\begin{DoxyCompactList}\small\item\em Process one charging simulation step for a vehicle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsim_a343ed509f3097f994347ea04154add58}{step\+\_\+ground}} (int vehicle, bool debug)
+\begin{DoxyCompactList}\small\item\em Process one grounded simulation step for a vehicle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsim_abe643430e5133d60e876a46a18513094}{destroy}} ()
+\begin{DoxyCompactList}\small\item\em Destroy simulation resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classsim_a78390ab37b6e55a744705c44d132dbbd}\index{sim@{sim}!sim@{sim}}
+\index{sim@{sim}!sim@{sim}}
+\doxysubsubsection{\texorpdfstring{sim()}{sim()}}
+{\footnotesize\ttfamily \label{classsim_a78390ab37b6e55a744705c44d132dbbd} 
+sim\+::sim (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Construct a new simulation object. 
+
+Initializes all simulation pointers, counters, and state variables. No memory allocation occurs until \doxylink{classsim_a9fcfcbb706cd13165039d44a6122fba7}{init()} is called. \Hypertarget{classsim_a288d45b6c6ee57bca1ac2306aceba1b8}\index{sim@{sim}!````~sim@{\texorpdfstring{$\sim$}{\string~}sim}}
+\index{````~sim@{\texorpdfstring{$\sim$}{\string~}sim}!sim@{sim}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}sim()}{\string~sim()}}
+{\footnotesize\ttfamily \label{classsim_a288d45b6c6ee57bca1ac2306aceba1b8} 
+sim\+::\texorpdfstring{$\sim$}{\string~}sim (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destroy the simulation object. 
+
+Frees all dynamically allocated resources if the simulation was previously initialized. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{classsim_a288d45b6c6ee57bca1ac2306aceba1b8_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsim_abe643430e5133d60e876a46a18513094}\index{sim@{sim}!destroy@{destroy}}
+\index{destroy@{destroy}!sim@{sim}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily \label{classsim_abe643430e5133d60e876a46a18513094} 
+void sim\+::destroy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destroy simulation resources. 
+
+Frees all dynamically allocated memory associated with vehicles and charging stations. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{classsim_abe643430e5133d60e876a46a18513094_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsim_a9fcfcbb706cd13165039d44a6122fba7}\index{sim@{sim}!init@{init}}
+\index{init@{init}!sim@{sim}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{classsim_a9fcfcbb706cd13165039d44a6122fba7} 
+void sim\+::init (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structvehicle__data__t}{vehicle\+\_\+data\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{types}{, }\item[{int}]{num\+\_\+type}{, }\item[{\mbox{\hyperlink{structstats__t}{stats\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{stats}{, }\item[{int}]{num\+\_\+stat}{, }\item[{int}]{num\+\_\+charger}{}\end{DoxyParamCaption})}
+
+
+
+Initialize the simulation. 
+
+Allocates runtime memory for vehicle state, charger state, and copies vehicle type data into the simulation.
+
+Also initializes random number generators and calculates per-\/step runtime values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em types} & Array of available vehicle type definitions. \\
+\hline
+{\em num\+\_\+type} & Number of vehicle types in the types array. \\
+\hline
+{\em stats} & Pointer to statistics output array. \\
+\hline
+{\em num\+\_\+stat} & Number of vehicle instances to simulate. \\
+\hline
+{\em num\+\_\+charger} & Number of available charging stations. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classsim_a9fcfcbb706cd13165039d44a6122fba7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsim_a6cf19bf06affe3e5639597f9c3e2d95e}\index{sim@{sim}!step@{step}}
+\index{step@{step}!sim@{sim}}
+\doxysubsubsection{\texorpdfstring{step()}{step()}}
+{\footnotesize\ttfamily \label{classsim_a6cf19bf06affe3e5639597f9c3e2d95e} 
+void sim\+::step (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Execute one simulation step. 
+
+Advances all vehicles by one simulation tick, updates charger states, processes faults, and updates statistics. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsim_a6cf19bf06affe3e5639597f9c3e2d95e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classsim_a6cf19bf06affe3e5639597f9c3e2d95e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsim_ab45dcd43dfcffda3e9792a6ecbd38763}\index{sim@{sim}!step\_airborne@{step\_airborne}}
+\index{step\_airborne@{step\_airborne}!sim@{sim}}
+\doxysubsubsection{\texorpdfstring{step\_airborne()}{step\_airborne()}}
+{\footnotesize\ttfamily \label{classsim_ab45dcd43dfcffda3e9792a6ecbd38763} 
+void sim\+::step\+\_\+airborne (\begin{DoxyParamCaption}\item[{int}]{vehicle}{}\end{DoxyParamCaption})}
+
+
+
+Process one airborne simulation step for a vehicle. 
+
+Consumes battery energy while the vehicle is airborne. If the battery is depleted, the vehicle transitions to the GROUND state.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vehicle} & Vehicle index. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classsim_ab45dcd43dfcffda3e9792a6ecbd38763_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsim_a59fa98b8915d103611ff25ebd8595c4e}\index{sim@{sim}!step\_charging@{step\_charging}}
+\index{step\_charging@{step\_charging}!sim@{sim}}
+\doxysubsubsection{\texorpdfstring{step\_charging()}{step\_charging()}}
+{\footnotesize\ttfamily \label{classsim_a59fa98b8915d103611ff25ebd8595c4e} 
+void sim\+::step\+\_\+charging (\begin{DoxyParamCaption}\item[{int}]{vehicle}{}\end{DoxyParamCaption})}
+
+
+
+Process one charging simulation step for a vehicle. 
+
+Charges the vehicle battery incrementally until full. Once fully charged, the vehicle transitions back to the AIRBORNE state.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vehicle} & Vehicle index. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{classsim_a59fa98b8915d103611ff25ebd8595c4e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsim_a343ed509f3097f994347ea04154add58}\index{sim@{sim}!step\_ground@{step\_ground}}
+\index{step\_ground@{step\_ground}!sim@{sim}}
+\doxysubsubsection{\texorpdfstring{step\_ground()}{step\_ground()}}
+{\footnotesize\ttfamily \label{classsim_a343ed509f3097f994347ea04154add58} 
+void sim\+::step\+\_\+ground (\begin{DoxyParamCaption}\item[{int}]{vehicle}{, }\item[{bool}]{debug}{}\end{DoxyParamCaption})}
+
+
+
+Process one grounded simulation step for a vehicle. 
+
+Attempts to assign the vehicle to a charging station. If all chargers are occupied, the vehicle enters the charging queue.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vehicle} & Vehicle index. \\
+\hline
+{\em debug} & Enable verbose debug printing. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{classsim_a343ed509f3097f994347ea04154add58_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{classsim_a343ed509f3097f994347ea04154add58_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/sim.\+h\item 
+src/\mbox{\hyperlink{sim_8cpp}{sim.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,26 @@
+\doxysection{queue.\+h}
+\hypertarget{queue_8h_source}{}\label{queue_8h_source}\index{include/queue.h@{include/queue.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ QUEUE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ QUEUE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ SIZE\_QUEUE\ 4096}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{int}\ size;}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{int}\ tail;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{int}\ head;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{char}\ buffer[SIZE\_QUEUE];}
+\DoxyCodeLine{00012\ \}\ \mbox{\hyperlink{structqueue__t}{queue\_t}};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{queue_8cpp_a582391f0b9f7d1888fb0984d0c3dcd9f}{enqueue}}(\mbox{\hyperlink{structqueue__t}{queue\_t}}\ *queue,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *buffer,\ \textcolor{keywordtype}{int}\ size);}
+\DoxyCodeLine{00015\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{queue_8cpp_a82526b8007d9a7ee8d6fc660a4170684}{enqueue\_front}}(\mbox{\hyperlink{structqueue__t}{queue\_t}}\ *queue,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *buffer,\ \textcolor{keywordtype}{int}\ size);}
+\DoxyCodeLine{00016\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{queue_8cpp_a56fbdf37b01e0a5787a9654c04dca6fe}{dequeue}}(\mbox{\hyperlink{structqueue__t}{queue\_t}}\ *queue,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *buffer,\ \textcolor{keywordtype}{int}\ size);}
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{queue_8cpp_a9d0efb861861c451c0e00661807a38d3}{dequeue\_peek}}(\mbox{\hyperlink{structqueue__t}{queue\_t}}\ *queue,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *buffer,\ \textcolor{keywordtype}{int}\ size);}
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{queue_8cpp_af5bc88810b033ff91a00e9ecffd2b356}{print\_queue}}(\mbox{\hyperlink{structqueue__t}{queue\_t}}\ *queue);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

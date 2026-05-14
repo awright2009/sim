@@ -1,0 +1,175 @@
+\doxysection{src/types.cpp File Reference}
+\hypertarget{types_8cpp}{}\label{types_8cpp}\index{src/types.cpp@{src/types.cpp}}
+
+
+String conversion helpers for simulation enumerations.  
+
+
+{\ttfamily \#include "{}types.\+h"{}}\newline
+Include dependency graph for types.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{types_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{types_8cpp_a239a85a48af4b690b5588962296b05f0}{company\+\_\+e\+\_\+to\+\_\+str}} (company\+\_\+e param)
+\begin{DoxyCompactList}\small\item\em Convert a company enumeration value to a string. \end{DoxyCompactList}\item 
+company\+\_\+e \mbox{\hyperlink{types_8cpp_a2ea777458f76e1519a8072576ac64413}{str\+\_\+to\+\_\+company\+\_\+e}} (const char \texorpdfstring{$\ast$}{*}str)
+\begin{DoxyCompactList}\small\item\em Convert a company name string to a company enumeration value. \end{DoxyCompactList}\item 
+vehicle\+\_\+state\+\_\+e \mbox{\hyperlink{types_8cpp_ae7bc05bc8f335da91b15ace807745f07}{str\+\_\+to\+\_\+vehicle\+\_\+state\+\_\+e}} (const char \texorpdfstring{$\ast$}{*}str)
+\begin{DoxyCompactList}\small\item\em Convert a vehicle state string to a vehicle\+\_\+state\+\_\+e enumeration. \end{DoxyCompactList}\item 
+charger\+\_\+state\+\_\+e \mbox{\hyperlink{types_8cpp_a9ffa8b8ac5040f9276f149f478dc39eb}{str\+\_\+to\+\_\+charger\+\_\+state\+\_\+e}} (const char \texorpdfstring{$\ast$}{*}str)
+\begin{DoxyCompactList}\small\item\em Convert a charger state string to a charger\+\_\+state\+\_\+e enumeration. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{types_8cpp_a2a45b0ae4928ad008112ffb14bbe30a3}{vehicle\+\_\+state\+\_\+e\+\_\+to\+\_\+str}} (vehicle\+\_\+state\+\_\+e param)
+\begin{DoxyCompactList}\small\item\em Convert a vehicle state enumeration value to a string. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{types_8cpp_afc628744968cecc2d13787c54791d1fc}{charger\+\_\+state\+\_\+e\+\_\+to\+\_\+str}} (charger\+\_\+state\+\_\+e param)
+\begin{DoxyCompactList}\small\item\em Convert a charger state enumeration value to a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+String conversion helpers for simulation enumerations. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{types_8cpp_afc628744968cecc2d13787c54791d1fc}\index{types.cpp@{types.cpp}!charger\_state\_e\_to\_str@{charger\_state\_e\_to\_str}}
+\index{charger\_state\_e\_to\_str@{charger\_state\_e\_to\_str}!types.cpp@{types.cpp}}
+\doxysubsubsection{\texorpdfstring{charger\_state\_e\_to\_str()}{charger\_state\_e\_to\_str()}}
+{\footnotesize\ttfamily \label{types_8cpp_afc628744968cecc2d13787c54791d1fc} 
+char \texorpdfstring{$\ast$}{*} charger\+\_\+state\+\_\+e\+\_\+to\+\_\+str (\begin{DoxyParamCaption}\item[{charger\+\_\+state\+\_\+e}]{param}{}\end{DoxyParamCaption})}
+
+
+
+Convert a charger state enumeration value to a string. 
+
+Returns a human-\/readable string representation of the specified charger state enumeration.
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & Charger state enumeration value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to constant string representation. 
+\end{DoxyReturn}
+\Hypertarget{types_8cpp_a239a85a48af4b690b5588962296b05f0}\index{types.cpp@{types.cpp}!company\_e\_to\_str@{company\_e\_to\_str}}
+\index{company\_e\_to\_str@{company\_e\_to\_str}!types.cpp@{types.cpp}}
+\doxysubsubsection{\texorpdfstring{company\_e\_to\_str()}{company\_e\_to\_str()}}
+{\footnotesize\ttfamily \label{types_8cpp_a239a85a48af4b690b5588962296b05f0} 
+char \texorpdfstring{$\ast$}{*} company\+\_\+e\+\_\+to\+\_\+str (\begin{DoxyParamCaption}\item[{company\+\_\+e}]{param}{}\end{DoxyParamCaption})}
+
+
+
+Convert a company enumeration value to a string. 
+
+Returns a human-\/readable string representation of the specified company enumeration.
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & Company enumeration value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to constant string representation. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{types_8cpp_a239a85a48af4b690b5588962296b05f0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{types_8cpp_a9ffa8b8ac5040f9276f149f478dc39eb}\index{types.cpp@{types.cpp}!str\_to\_charger\_state\_e@{str\_to\_charger\_state\_e}}
+\index{str\_to\_charger\_state\_e@{str\_to\_charger\_state\_e}!types.cpp@{types.cpp}}
+\doxysubsubsection{\texorpdfstring{str\_to\_charger\_state\_e()}{str\_to\_charger\_state\_e()}}
+{\footnotesize\ttfamily \label{types_8cpp_a9ffa8b8ac5040f9276f149f478dc39eb} 
+charger\+\_\+state\+\_\+e str\+\_\+to\+\_\+charger\+\_\+state\+\_\+e (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})}
+
+
+
+Convert a charger state string to a charger\+\_\+state\+\_\+e enumeration. 
+
+Searches the input string for known charger state identifiers and returns the corresponding charger\+\_\+state\+\_\+e value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & Input string containing a charger state name.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matching charger\+\_\+state\+\_\+e value, or -\/1 if no match is found. 
+\end{DoxyReturn}
+\Hypertarget{types_8cpp_a2ea777458f76e1519a8072576ac64413}\index{types.cpp@{types.cpp}!str\_to\_company\_e@{str\_to\_company\_e}}
+\index{str\_to\_company\_e@{str\_to\_company\_e}!types.cpp@{types.cpp}}
+\doxysubsubsection{\texorpdfstring{str\_to\_company\_e()}{str\_to\_company\_e()}}
+{\footnotesize\ttfamily \label{types_8cpp_a2ea777458f76e1519a8072576ac64413} 
+company\+\_\+e str\+\_\+to\+\_\+company\+\_\+e (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})}
+
+
+
+Convert a company name string to a company enumeration value. 
+
+Searches the input string for known company identifiers and returns the corresponding company\+\_\+e enumeration value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & Input string containing a company name.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matching company\+\_\+e value, or -\/1 if no match is found. 
+\end{DoxyReturn}
+\Hypertarget{types_8cpp_ae7bc05bc8f335da91b15ace807745f07}\index{types.cpp@{types.cpp}!str\_to\_vehicle\_state\_e@{str\_to\_vehicle\_state\_e}}
+\index{str\_to\_vehicle\_state\_e@{str\_to\_vehicle\_state\_e}!types.cpp@{types.cpp}}
+\doxysubsubsection{\texorpdfstring{str\_to\_vehicle\_state\_e()}{str\_to\_vehicle\_state\_e()}}
+{\footnotesize\ttfamily \label{types_8cpp_ae7bc05bc8f335da91b15ace807745f07} 
+vehicle\+\_\+state\+\_\+e str\+\_\+to\+\_\+vehicle\+\_\+state\+\_\+e (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})}
+
+
+
+Convert a vehicle state string to a vehicle\+\_\+state\+\_\+e enumeration. 
+
+Searches the input string for known vehicle state identifiers and returns the corresponding vehicle\+\_\+state\+\_\+e value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & Input string containing a vehicle state name.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matching vehicle\+\_\+state\+\_\+e value, or -\/1 if no match is found. 
+\end{DoxyReturn}
+\Hypertarget{types_8cpp_a2a45b0ae4928ad008112ffb14bbe30a3}\index{types.cpp@{types.cpp}!vehicle\_state\_e\_to\_str@{vehicle\_state\_e\_to\_str}}
+\index{vehicle\_state\_e\_to\_str@{vehicle\_state\_e\_to\_str}!types.cpp@{types.cpp}}
+\doxysubsubsection{\texorpdfstring{vehicle\_state\_e\_to\_str()}{vehicle\_state\_e\_to\_str()}}
+{\footnotesize\ttfamily \label{types_8cpp_a2a45b0ae4928ad008112ffb14bbe30a3} 
+char \texorpdfstring{$\ast$}{*} vehicle\+\_\+state\+\_\+e\+\_\+to\+\_\+str (\begin{DoxyParamCaption}\item[{vehicle\+\_\+state\+\_\+e}]{param}{}\end{DoxyParamCaption})}
+
+
+
+Convert a vehicle state enumeration value to a string. 
+
+Returns a human-\/readable string representation of the specified vehicle state enumeration.
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & Vehicle state enumeration value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to constant string representation. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{types_8cpp_a2a45b0ae4928ad008112ffb14bbe30a3_icgraph}
+\end{center}
+\end{figure}

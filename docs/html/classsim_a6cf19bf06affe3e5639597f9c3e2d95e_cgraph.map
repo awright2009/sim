@@ -1,0 +1,21 @@
+<map id="sim::step" name="sim::step">
+<area shape="rect" id="Node000001" title="Execute one simulation step." alt="" coords="5,104,81,129"/>
+<area shape="rect" id="Node000002" href="$types_8cpp.html#a239a85a48af4b690b5588962296b05f0" title="Convert a company enumeration value to a string." alt="" coords="141,5,270,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,102,86,71,128,40,141,33,143,38,131,44,89,75,58,106"/>
+<area shape="rect" id="Node000003" href="$classsim.html#ab45dcd43dfcffda3e9792a6ecbd38763" title="Process one airborne simulation step for a vehicle." alt="" coords="140,55,271,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="81,103,149,82,151,87,82,108"/>
+<area shape="rect" id="Node000004" href="$classsim.html#a59fa98b8915d103611ff25ebd8595c4e" title="Process one charging simulation step for a vehicle." alt="" coords="139,104,271,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="82,114,126,114,126,119,82,119"/>
+<area shape="rect" id="Node000005" href="$classsim.html#a343ed509f3097f994347ea04154add58" title="Process one grounded simulation step for a vehicle." alt="" coords="144,153,267,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="82,126,151,147,149,152,81,131"/>
+<area shape="rect" id="Node000010" href="$types_8cpp.html#a2a45b0ae4928ad008112ffb14bbe30a3" title="Convert a vehicle state enumeration value to a string." alt="" coords="129,203,281,228"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="59,128,90,158,131,188,146,195,144,200,128,192,86,162,55,132"/>
+<area shape="rect" id="Node000006" href="$queue_8cpp.html#a56fbdf37b01e0a5787a9654c04dca6fe" title="Remove data from the front of the queue." alt="" coords="347,79,418,104"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="247,151,280,138,328,113,340,107,342,112,331,118,282,143,249,156"/>
+<area shape="rect" id="Node000007" href="$queue_8cpp.html#a9d0efb861861c451c0e00661807a38d3" title="Peek at queue data without removing it." alt="" coords="329,128,436,153"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="266,155,316,148,316,153,267,160"/>
+<area shape="rect" id="Node000008" href="$queue_8cpp.html#a582391f0b9f7d1888fb0984d0c3dcd9f" title="Add data to the back of the queue." alt="" coords="347,177,418,203"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="267,172,334,181,333,186,266,177"/>
+<area shape="rect" id="Node000009" href="$queue_8cpp.html#af5bc88810b033ff91a00e9ecffd2b356" title="Print the current queue contents and state." alt="" coords="338,227,427,252"/>
+<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="251,176,282,188,331,212,344,218,341,223,328,216,280,192,249,181"/>
+</map>

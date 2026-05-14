@@ -1,0 +1,86 @@
+\doxysection{types.\+h}
+\hypertarget{types_8h_source}{}\label{types_8h_source}\index{include/types.h@{include/types.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TYPES\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TYPES\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{enum}\ company\_e\ \{\ ALPHA,\ BRAVO,\ CHARLIE,\ DELTA,\ ECHO\ \};}
+\DoxyCodeLine{00009\ \textcolor{keyword}{enum}\ vehicle\_state\_e\ \{\ AIRBORNE,\ GROUND,\ CHARGING\ \};}
+\DoxyCodeLine{00010\ \textcolor{keyword}{enum}\ charger\_state\_e\ \{\ FREE,\ OCCUPIED\ \};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{types_8cpp_a239a85a48af4b690b5588962296b05f0}{company\_e\_to\_str}}(company\_e\ param);}
+\DoxyCodeLine{00013\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{types_8cpp_a2a45b0ae4928ad008112ffb14bbe30a3}{vehicle\_state\_e\_to\_str}}(vehicle\_state\_e\ param);}
+\DoxyCodeLine{00014\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{types_8cpp_afc628744968cecc2d13787c54791d1fc}{charger\_state\_e\_to\_str}}(charger\_state\_e\ param);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ company\_e\ \mbox{\hyperlink{types_8cpp_a2ea777458f76e1519a8072576ac64413}{str\_to\_company\_e}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *str);}
+\DoxyCodeLine{00017\ vehicle\_state\_e\ \mbox{\hyperlink{types_8cpp_ae7bc05bc8f335da91b15ace807745f07}{str\_to\_vehicle\_state\_e}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *str);}
+\DoxyCodeLine{00018\ charger\_state\_e\ \mbox{\hyperlink{types_8cpp_a9ffa8b8ac5040f9276f149f478dc39eb}{str\_to\_charger\_state\_e}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *str);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ company\_e\ \ \ name;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ cruise\_speed;\ \textcolor{comment}{//\ mph}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ battery\_capacity;\ \textcolor{comment}{//\ kWh}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ charge\_time;\ \textcolor{comment}{//\ hours}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ energy\_usage\_cruise;\ \textcolor{comment}{//\ kWh/mile}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ passenger\_count;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ fault\_prob;\ \textcolor{comment}{//\ per\ hour}}
+\DoxyCodeLine{00030\ \}\ \mbox{\hyperlink{structvehicle__data__t}{vehicle\_data\_t}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00034\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ num\_flight;}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ num\_charge\_session;}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ num\_fault;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//\ step\ based,\ flight\ time\ and\ total\ distance\ time\ are\ essentially\ both\ based\ on\ airborne\ steps}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ num\_step\_airborne;}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ num\_step\_charging;}
+\DoxyCodeLine{00042\ \}\ \mbox{\hyperlink{structrun__stats__t}{run\_stats\_t}};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00045\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ \ \ \ \ battery\_capacity;}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ \ \ \ \ energy\_consumption\_per\_step;}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ \ \ \ \ energy\_charge\_per\_step;}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ vehicle\_charger;}
+\DoxyCodeLine{00050\ \ \ \ \ vehicle\_state\_e\ vehicle\_state;}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{structrun__stats__t}{run\_stats\_t}}\ \ \ \ \ \ run\_stats;}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ \ \ in\_line;}
+\DoxyCodeLine{00053\ \}\ \mbox{\hyperlink{structrun__state__t}{run\_state\_t}};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00056\ \{}
+\DoxyCodeLine{00057\ \ \ \ \ charger\_state\_e\ charger\_state;}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ charging\_vehicle;}
+\DoxyCodeLine{00059\ \}\ \mbox{\hyperlink{structcharge__station__state__t}{charge\_station\_state\_t}};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00063\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ company\_e\ name;}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{float}\ avg\_time\_per\_flight;}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{float}\ avg\_dist\_per\_flight;}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{float}\ avg\_time\_charging\_per\_charge\_session;}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{int}\ total\_faults;}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//\ 2\ vehicles,\ 4\ passengers\ 1\ hour\ at\ 100mph,\ 2\ *\ 4\ *\ 1\ *\ 100\ =\ 800}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{int}\ passenger\_miles;}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{float}\ cruise\_speed;}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{int}\ num\_step\_airborne;}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{int}\ num\_flight;}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{int}\ num\_step\_charging;}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{int}\ num\_charge\_session;}
+\DoxyCodeLine{00077\ \}\ \mbox{\hyperlink{structstats__t}{stats\_t}};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
