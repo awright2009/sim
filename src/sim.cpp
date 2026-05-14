@@ -15,13 +15,15 @@ sim::sim()
 {
 	initialized = false;
 
-	run_state				= NULL;
-	vehicle_data			= NULL;
+	run_state		= NULL;
+	vehicle_data		= NULL;
 	charge_station_state	= NULL;
 
 	num_vehicle = 0;
 	num_charge_station = 0;
 	num_step = 0;
+
+	memset(&queue, 0, sizeof(queue_t));
 }
 
 

@@ -9,17 +9,29 @@ A lightweight C/C++ vehicle simulation with charging stations
   - Windows
   
 # Requirements
-  
+
+g++
+
 # Building
 
-# Running
+make
 
 # Example Usage
 
+./sim
+
 # Documentation
+
+./docs/
 
 # Testing
 
+./test/
+
 # License
 
+TBD
+
 # Author
+
+Alexander Wright
