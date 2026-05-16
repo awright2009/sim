@@ -21,6 +21,7 @@ typedef struct
 } csv_handle_t;
 
 
+char *get_file(const char *filename, unsigned int *size);
 int OpenCSV(const char *filename, csv_handle_t *handle);
 int CloseCSV(csv_handle_t *handle);
 void IntToBase26(char *output, int pos);

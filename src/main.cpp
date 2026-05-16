@@ -57,6 +57,26 @@ int main(int argc, char *argv[])
 	};
 #endif
 
+	if (argc < 2)
+	{
+		printf("Usage: %s <num_hours_to_simulate>\r\n", argv[0]);
+		return 0;
+	}
+
+	float num_hours_to_simulate = atof(argv[1]);
+	if (num_hours_to_simulate < 0.0f)
+	{
+		printf("Invalid input, negative time\r\n");
+		return -1;
+	}
+
+	if (num_hours_to_simulate > 1000.0f)
+	{
+		printf("Hours to simulate must be within [0, 1000]\r\n");
+		return -1;
+	}
+
+
 	vehicle_data_t types[5] = {};
 	if (read_vehicle_data(types, (char *)"vehicle_data.csv") != 0)
 	{
@@ -71,7 +91,7 @@ int main(int argc, char *argv[])
 	simulator.init(types, NUM_TYPE, stats, NUM_STATS, NUM_CHARGE_STATION);
 	
 	// simulating each second, 1 step = 1 second (could redefine steps to an arbitrary time period)
-	for (uint64_t i = 0; i < NUM_HOURS_SIMULATED * STEPS_PER_HOUR; i++)
+	for (uint64_t i = 0; i < num_hours_to_simulate * STEPS_PER_HOUR; i++)
 	{
 		simulator.step();
 	}

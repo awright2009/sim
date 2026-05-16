@@ -1,7 +1,7 @@
 CXX = g++
 CXXFLAGS = -Wall -Wextra -std=c++17 -g -Iinclude
 
-TARGET = myprogram
+TARGET = sim
 
 SRC_DIR = src
 OBJ_DIR = obj

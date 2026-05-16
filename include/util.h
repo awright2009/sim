@@ -10,8 +10,6 @@
 #define CSV_HEIGHT (6)
 #define CSV_LENGTH (128)
 
-#define NUM_HOURS_SIMULATED (3)
-
 int read_vehicle_data(vehicle_data_t *types, char *filename);
 void write_stats(stats_t *stats, int num_stat);
 
