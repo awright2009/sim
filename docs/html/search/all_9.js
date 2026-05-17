@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['queue_2ecpp_0',['queue.cpp',['../queue_8cpp.html',1,'']]],
-  ['queue_2eh_1',['queue.h',['../queue_8h.html',1,'']]],
-  ['queue_5ft_2',['queue_t',['../structqueue__t.html',1,'']]]
+  ['print_5fqueue_0',['print_queue',['../queue_8cpp.html#af5bc88810b033ff91a00e9ecffd2b356',1,'print_queue(queue_t *queue):&#160;queue.cpp'],['../queue_8h.html#af5bc88810b033ff91a00e9ecffd2b356',1,'print_queue(queue_t *queue):&#160;queue.cpp']]]
 ];

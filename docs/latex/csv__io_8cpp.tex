@@ -1,0 +1,470 @@
+\doxysection{src/csv\+\_\+io.cpp File Reference}
+\hypertarget{csv__io_8cpp}{}\label{csv__io_8cpp}\index{src/csv\_io.cpp@{src/csv\_io.cpp}}
+
+
+CSV file parsing and spreadsheet-\/style cell access utilities.  
+
+
+{\ttfamily \#include "{}csv\+\_\+io.\+h"{}}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+Include dependency graph for csv\+\_\+io.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{csv__io_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{csv__io_8cpp_aacc3ee1a7f283f8ef65cea31f4436a95}{MAX}}(x,  y)
+\item 
+\#define \mbox{\hyperlink{csv__io_8cpp_a74e75242132eaabbc1c512488a135926}{MIN}}(x,  y)
+\item 
+\Hypertarget{csv__io_8cpp_ad5131de0b5004c64db5e79e8aac7471e}\label{csv__io_8cpp_ad5131de0b5004c64db5e79e8aac7471e} 
+\#define {\bfseries LINE\+\_\+\+LENGTH}~(MAX\+\_\+\+CSV\+\_\+\+LINE)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{csv__io_8cpp_af835242a83d52797424067b92c7c8161}{get\+\_\+file}} (const char \texorpdfstring{$\ast$}{*}filename, unsigned int \texorpdfstring{$\ast$}{*}size)
+\begin{DoxyCompactList}\small\item\em Read an entire file into memory. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{csv__io_8cpp_aec44ced8a6365adbb809d5b59ba871e2}{newlinelist}} (const char \texorpdfstring{$\ast$}{*}filename, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}list, unsigned int \&num, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}file)
+\begin{DoxyCompactList}\small\item\em Read a text file and split it into newline-\/delimited strings. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{csv__io_8cpp_a6fa55ded1cc7e25acf73db34096b5f51}{Open\+CSV}} (const char \texorpdfstring{$\ast$}{*}filename, \mbox{\hyperlink{structcsv__handle__t}{csv\+\_\+handle\+\_\+t}} \texorpdfstring{$\ast$}{*}handle)
+\begin{DoxyCompactList}\small\item\em Open and parse a CSV file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{csv__io_8cpp_a6cae5b6d9173efd8018f41eb5949e676}{Close\+CSV}} (\mbox{\hyperlink{structcsv__handle__t}{csv\+\_\+handle\+\_\+t}} \texorpdfstring{$\ast$}{*}handle)
+\begin{DoxyCompactList}\small\item\em Close a CSV handle and free associated memory. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{csv__io_8cpp_a675636f20702c1cb56ef73639fb96609}{Base26\+To\+Int}} (const char \texorpdfstring{$\ast$}{*}col\+\_\+char)
+\begin{DoxyCompactList}\small\item\em Convert a spreadsheet-\/style column label to an integer index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{csv__io_8cpp_a2bf72ace46bdc4a9013438823df3d38d}{Int\+To\+Base26}} (char \texorpdfstring{$\ast$}{*}output, int pos)
+\begin{DoxyCompactList}\small\item\em Convert a numeric column index to spreadsheet-\/style notation. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{csv__io_8cpp_aedb8680ec1d38d2d1f2c08fdc66c0642}{read\+CSVCell}} (const \mbox{\hyperlink{structcsv__handle__t}{csv\+\_\+handle\+\_\+t}} \texorpdfstring{$\ast$}{*}handle, const char \texorpdfstring{$\ast$}{*}col\+\_\+char, int row, char \texorpdfstring{$\ast$}{*}value, int length)
+\begin{DoxyCompactList}\small\item\em Read a single cell value from a CSV file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{csv__io_8cpp_a58cf624aa5ee8a014b6985f1656f3b56}{compare\+CSVCell\+Double}} (const \mbox{\hyperlink{structcsv__handle__t}{csv\+\_\+handle\+\_\+t}} \texorpdfstring{$\ast$}{*}a, char \texorpdfstring{$\ast$}{*}col\+\_\+a, int row\+\_\+a, const \mbox{\hyperlink{structcsv__handle__t}{csv\+\_\+handle\+\_\+t}} \texorpdfstring{$\ast$}{*}b, char \texorpdfstring{$\ast$}{*}col\+\_\+b, int row\+\_\+b, double \&diff, double \&data\+\_\+a, double \&data\+\_\+b)
+\begin{DoxyCompactList}\small\item\em Compare two CSV cell values as doubles. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{csv__io_8cpp_a5f52f77256c041058fb6174a619d3fea}{Get\+Array}} (\mbox{\hyperlink{structcsv__handle__t}{csv\+\_\+handle\+\_\+t}} \texorpdfstring{$\ast$}{*}handle, int rbase, int cbase, int rows, int cols, double \texorpdfstring{$\ast$}{*}data)
+\begin{DoxyCompactList}\small\item\em Read a rectangular block of CSV data into a numeric array. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{csv__io_8cpp_a551fa0e6b358c7fd01a993438ab96434}{Compare\+Array}} (\mbox{\hyperlink{structcsv__handle__t}{csv\+\_\+handle\+\_\+t}} \&a, int rbase\+\_\+a, int cbase\+\_\+a, \mbox{\hyperlink{structcsv__handle__t}{csv\+\_\+handle\+\_\+t}} \&b, int rbase\+\_\+b, int cbase\+\_\+b, int rows, int cols, double threshold)
+\begin{DoxyCompactList}\small\item\em Compare two rectangular regions of CSV data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+CSV file parsing and spreadsheet-\/style cell access utilities. 
+
+This source file implements functions for\+:
+\begin{DoxyItemize}
+\item Loading text and CSV files into memory
+\item Tokenizing newline-\/delimited file contents
+\item Accessing CSV cells using spreadsheet-\/style coordinates
+\item Converting between integer and base-\/26 column notation
+\item Extracting numeric arrays from CSV data
+\item Comparing CSV values and matrix regions
+\end{DoxyItemize}
+
+The implementation supports lightweight CSV parsing and numeric validation utilities for test and simulation workflows. 
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{csv__io_8cpp_aacc3ee1a7f283f8ef65cea31f4436a95}\index{csv\_io.cpp@{csv\_io.cpp}!MAX@{MAX}}
+\index{MAX@{MAX}!csv\_io.cpp@{csv\_io.cpp}}
+\doxysubsubsection{\texorpdfstring{MAX}{MAX}}
+{\footnotesize\ttfamily \label{csv__io_8cpp_aacc3ee1a7f283f8ef65cea31f4436a95} 
+\#define MAX(\begin{DoxyParamCaption}\item[{}]{x}{, }\item[{}]{y}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(x)\ >\ (y)\ ?\ (x)\ :\ (y)}
+
+\end{DoxyCode}
+\Hypertarget{csv__io_8cpp_a74e75242132eaabbc1c512488a135926}\index{csv\_io.cpp@{csv\_io.cpp}!MIN@{MIN}}
+\index{MIN@{MIN}!csv\_io.cpp@{csv\_io.cpp}}
+\doxysubsubsection{\texorpdfstring{MIN}{MIN}}
+{\footnotesize\ttfamily \label{csv__io_8cpp_a74e75242132eaabbc1c512488a135926} 
+\#define MIN(\begin{DoxyParamCaption}\item[{}]{x}{, }\item[{}]{y}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(x)\ <\ (y)\ ?\ (x)\ :\ (y)}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{csv__io_8cpp_a675636f20702c1cb56ef73639fb96609}\index{csv\_io.cpp@{csv\_io.cpp}!Base26ToInt@{Base26ToInt}}
+\index{Base26ToInt@{Base26ToInt}!csv\_io.cpp@{csv\_io.cpp}}
+\doxysubsubsection{\texorpdfstring{Base26ToInt()}{Base26ToInt()}}
+{\footnotesize\ttfamily \label{csv__io_8cpp_a675636f20702c1cb56ef73639fb96609} 
+int Base26\+To\+Int (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{col\+\_\+char}{}\end{DoxyParamCaption})}
+
+
+
+Convert a spreadsheet-\/style column label to an integer index. 
+
+Converts alphabetic column labels such as "{}\+A"{}, "{}\+Z"{}, "{}\+AA"{}, or "{}\+BC"{} into a 1-\/based integer index.
+
+
+\begin{DoxyParams}{Parameters}
+{\em col\+\_\+char} & Null-\/terminated column label string.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1-\/based column index. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{csv__io_8cpp_a675636f20702c1cb56ef73639fb96609_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{csv__io_8cpp_a6cae5b6d9173efd8018f41eb5949e676}\index{csv\_io.cpp@{csv\_io.cpp}!CloseCSV@{CloseCSV}}
+\index{CloseCSV@{CloseCSV}!csv\_io.cpp@{csv\_io.cpp}}
+\doxysubsubsection{\texorpdfstring{CloseCSV()}{CloseCSV()}}
+{\footnotesize\ttfamily \label{csv__io_8cpp_a6cae5b6d9173efd8018f41eb5949e676} 
+int Close\+CSV (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcsv__handle__t}{csv\+\_\+handle\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{handle}{}\end{DoxyParamCaption})}
+
+
+
+Close a CSV handle and free associated memory. 
+
+Releases the file buffer allocated during \doxylink{csv__io_8cpp_a6fa55ded1cc7e25acf73db34096b5f51}{Open\+CSV()}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Pointer to the CSV handle structure.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 if no file buffer exists. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{csv__io_8cpp_a6cae5b6d9173efd8018f41eb5949e676_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{csv__io_8cpp_a551fa0e6b358c7fd01a993438ab96434}\index{csv\_io.cpp@{csv\_io.cpp}!CompareArray@{CompareArray}}
+\index{CompareArray@{CompareArray}!csv\_io.cpp@{csv\_io.cpp}}
+\doxysubsubsection{\texorpdfstring{CompareArray()}{CompareArray()}}
+{\footnotesize\ttfamily \label{csv__io_8cpp_a551fa0e6b358c7fd01a993438ab96434} 
+int Compare\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcsv__handle__t}{csv\+\_\+handle\+\_\+t}} \&}]{a}{, }\item[{int}]{rbase\+\_\+a}{, }\item[{int}]{cbase\+\_\+a}{, }\item[{\mbox{\hyperlink{structcsv__handle__t}{csv\+\_\+handle\+\_\+t}} \&}]{b}{, }\item[{int}]{rbase\+\_\+b}{, }\item[{int}]{cbase\+\_\+b}{, }\item[{int}]{rows}{, }\item[{int}]{cols}{, }\item[{double}]{threshold}{}\end{DoxyParamCaption})}
+
+
+
+Compare two rectangular regions of CSV data. 
+
+Compares corresponding cells from two CSV files as doubles and verifies that the absolute difference does not exceed the specified threshold.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Reference to the first CSV handle. \\
+\hline
+{\em rbase\+\_\+a} & Starting row index in CSV A (1-\/based). \\
+\hline
+{\em cbase\+\_\+a} & Starting column index in CSV A (1-\/based). \\
+\hline
+{\em b} & Reference to the second CSV handle. \\
+\hline
+{\em rbase\+\_\+b} & Starting row index in CSV B (1-\/based). \\
+\hline
+{\em cbase\+\_\+b} & Starting column index in CSV B (1-\/based). \\
+\hline
+{\em rows} & Number of rows to compare. \\
+\hline
+{\em cols} & Number of columns to compare. \\
+\hline
+{\em threshold} & Maximum allowable difference.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if all values match within threshold, -\/1 on mismatch or error. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{csv__io_8cpp_a551fa0e6b358c7fd01a993438ab96434_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{csv__io_8cpp_a58cf624aa5ee8a014b6985f1656f3b56}\index{csv\_io.cpp@{csv\_io.cpp}!compareCSVCellDouble@{compareCSVCellDouble}}
+\index{compareCSVCellDouble@{compareCSVCellDouble}!csv\_io.cpp@{csv\_io.cpp}}
+\doxysubsubsection{\texorpdfstring{compareCSVCellDouble()}{compareCSVCellDouble()}}
+{\footnotesize\ttfamily \label{csv__io_8cpp_a58cf624aa5ee8a014b6985f1656f3b56} 
+int compare\+CSVCell\+Double (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcsv__handle__t}{csv\+\_\+handle\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{a}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{col\+\_\+a}{, }\item[{int}]{row\+\_\+a}{, }\item[{const \mbox{\hyperlink{structcsv__handle__t}{csv\+\_\+handle\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{b}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{col\+\_\+b}{, }\item[{int}]{row\+\_\+b}{, }\item[{double \&}]{diff}{, }\item[{double \&}]{data\+\_\+a}{, }\item[{double \&}]{data\+\_\+b}{}\end{DoxyParamCaption})}
+
+
+
+Compare two CSV cell values as doubles. 
+
+Reads values from two CSV cells, converts them to double precision, and computes the absolute difference between them.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Pointer to the first CSV handle. \\
+\hline
+{\em col\+\_\+a} & Column label in the first CSV. \\
+\hline
+{\em row\+\_\+a} & Row index in the first CSV. \\
+\hline
+{\em b} & Pointer to the second CSV handle. \\
+\hline
+{\em col\+\_\+b} & Column label in the second CSV. \\
+\hline
+{\em row\+\_\+b} & Row index in the second CSV. \\
+\hline
+{\em diff} & Reference to receive the absolute difference. \\
+\hline
+{\em data\+\_\+a} & Reference to receive the parsed value from CSV A. \\
+\hline
+{\em data\+\_\+b} & Reference to receive the parsed value from CSV B.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{csv__io_8cpp_a58cf624aa5ee8a014b6985f1656f3b56_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{csv__io_8cpp_a58cf624aa5ee8a014b6985f1656f3b56_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{csv__io_8cpp_af835242a83d52797424067b92c7c8161}\index{csv\_io.cpp@{csv\_io.cpp}!get\_file@{get\_file}}
+\index{get\_file@{get\_file}!csv\_io.cpp@{csv\_io.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_file()}{get\_file()}}
+{\footnotesize\ttfamily \label{csv__io_8cpp_af835242a83d52797424067b92c7c8161} 
+char \texorpdfstring{$\ast$}{*} get\+\_\+file (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{, }\item[{unsigned int \texorpdfstring{$\ast$}{*}}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Read an entire file into memory. 
+
+Opens the specified file in binary mode, allocates a buffer large enough to contain the file contents plus a null terminator, and reads the file into the buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path to the file to read. \\
+\hline
+{\em size} & Optional pointer to receive the file size in bytes.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to a null-\/terminated buffer containing the file contents, or nullptr on failure.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The returned buffer must be released with delete\mbox{[}\mbox{]}. 
+\end{DoxyNote}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{csv__io_8cpp_af835242a83d52797424067b92c7c8161_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{csv__io_8cpp_a5f52f77256c041058fb6174a619d3fea}\index{csv\_io.cpp@{csv\_io.cpp}!GetArray@{GetArray}}
+\index{GetArray@{GetArray}!csv\_io.cpp@{csv\_io.cpp}}
+\doxysubsubsection{\texorpdfstring{GetArray()}{GetArray()}}
+{\footnotesize\ttfamily \label{csv__io_8cpp_a5f52f77256c041058fb6174a619d3fea} 
+int Get\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcsv__handle__t}{csv\+\_\+handle\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{handle}{, }\item[{int}]{rbase}{, }\item[{int}]{cbase}{, }\item[{int}]{rows}{, }\item[{int}]{cols}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Read a rectangular block of CSV data into a numeric array. 
+
+Reads a specified range of CSV cells, converts each value to double, and stores the results in row-\/major order.
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Pointer to the CSV handle. \\
+\hline
+{\em rbase} & Starting row index (1-\/based). \\
+\hline
+{\em cbase} & Starting column index (1-\/based). \\
+\hline
+{\em rows} & Number of rows to read. \\
+\hline
+{\em cols} & Number of columns to read. \\
+\hline
+{\em data} & Output array to receive the parsed values.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{csv__io_8cpp_a5f52f77256c041058fb6174a619d3fea_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{csv__io_8cpp_a2bf72ace46bdc4a9013438823df3d38d}\index{csv\_io.cpp@{csv\_io.cpp}!IntToBase26@{IntToBase26}}
+\index{IntToBase26@{IntToBase26}!csv\_io.cpp@{csv\_io.cpp}}
+\doxysubsubsection{\texorpdfstring{IntToBase26()}{IntToBase26()}}
+{\footnotesize\ttfamily \label{csv__io_8cpp_a2bf72ace46bdc4a9013438823df3d38d} 
+void Int\+To\+Base26 (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{output}{, }\item[{int}]{pos}{}\end{DoxyParamCaption})}
+
+
+
+Convert a numeric column index to spreadsheet-\/style notation. 
+
+Converts a 1-\/based integer index into alphabetic column notation such as "{}\+A"{}, "{}\+Z"{}, "{}\+AA"{}, or "{}\+BC"{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em output} & Output buffer to receive the column string. \\
+\hline
+{\em pos} & 1-\/based column index. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{csv__io_8cpp_a2bf72ace46bdc4a9013438823df3d38d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{csv__io_8cpp_aec44ced8a6365adbb809d5b59ba871e2}\index{csv\_io.cpp@{csv\_io.cpp}!newlinelist@{newlinelist}}
+\index{newlinelist@{newlinelist}!csv\_io.cpp@{csv\_io.cpp}}
+\doxysubsubsection{\texorpdfstring{newlinelist()}{newlinelist()}}
+{\footnotesize\ttfamily \label{csv__io_8cpp_aec44ced8a6365adbb809d5b59ba871e2} 
+int newlinelist (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{, }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{list}{, }\item[{unsigned int \&}]{num}{, }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{file}{}\end{DoxyParamCaption})}
+
+
+
+Read a text file and split it into newline-\/delimited strings. 
+
+Loads the specified file into memory and tokenizes it using newline characters. Lines beginning with \textquotesingle{}//\textquotesingle{} are ignored. Carriage returns are removed from Windows-\/style line endings.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path to the text file. \\
+\hline
+{\em list} & Array of character pointers to receive line pointers. \\
+\hline
+{\em num} & Reference to receive the number of valid lines found. \\
+\hline
+{\em file} & Pointer to receive the allocated file buffer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The returned file buffer must remain valid while using the line list. 
+\end{DoxyNote}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{csv__io_8cpp_aec44ced8a6365adbb809d5b59ba871e2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{csv__io_8cpp_aec44ced8a6365adbb809d5b59ba871e2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{csv__io_8cpp_a6fa55ded1cc7e25acf73db34096b5f51}\index{csv\_io.cpp@{csv\_io.cpp}!OpenCSV@{OpenCSV}}
+\index{OpenCSV@{OpenCSV}!csv\_io.cpp@{csv\_io.cpp}}
+\doxysubsubsection{\texorpdfstring{OpenCSV()}{OpenCSV()}}
+{\footnotesize\ttfamily \label{csv__io_8cpp_a6fa55ded1cc7e25acf73db34096b5f51} 
+int Open\+CSV (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{, }\item[{\mbox{\hyperlink{structcsv__handle__t}{csv\+\_\+handle\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{handle}{}\end{DoxyParamCaption})}
+
+
+
+Open and parse a CSV file. 
+
+Reads the CSV file into memory and populates the \doxylink{structcsv__handle__t}{csv\+\_\+handle\+\_\+t} structure with pointers to each parsed line.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path to the CSV file. \\
+\hline
+{\em handle} & Pointer to the CSV handle structure to initialize.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{csv__io_8cpp_a6fa55ded1cc7e25acf73db34096b5f51_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{csv__io_8cpp_a6fa55ded1cc7e25acf73db34096b5f51_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{csv__io_8cpp_aedb8680ec1d38d2d1f2c08fdc66c0642}\index{csv\_io.cpp@{csv\_io.cpp}!readCSVCell@{readCSVCell}}
+\index{readCSVCell@{readCSVCell}!csv\_io.cpp@{csv\_io.cpp}}
+\doxysubsubsection{\texorpdfstring{readCSVCell()}{readCSVCell()}}
+{\footnotesize\ttfamily \label{csv__io_8cpp_aedb8680ec1d38d2d1f2c08fdc66c0642} 
+int read\+CSVCell (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcsv__handle__t}{csv\+\_\+handle\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{handle}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{col\+\_\+char}{, }\item[{int}]{row}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{value}{, }\item[{int}]{length}{}\end{DoxyParamCaption})}
+
+
+
+Read a single cell value from a CSV file. 
+
+Retrieves the value at the specified row and column from the parsed CSV data and copies it into the provided output buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Pointer to the CSV handle. \\
+\hline
+{\em col\+\_\+char} & Spreadsheet-\/style column label (e.\+g. "{}\+A"{}, "{}\+AA"{}). \\
+\hline
+{\em row} & 1-\/based row index. \\
+\hline
+{\em value} & Output buffer to receive the cell contents. \\
+\hline
+{\em length} & Size of the output buffer in bytes.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{csv__io_8cpp_aedb8680ec1d38d2d1f2c08fdc66c0642_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{csv__io_8cpp_aedb8680ec1d38d2d1f2c08fdc66c0642_icgraph}
+\end{center}
+\end{figure}

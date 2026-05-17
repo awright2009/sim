@@ -1,0 +1,13 @@
+<map id="Base26ToInt" name="Base26ToInt">
+<area shape="rect" id="Node000001" title="Convert a spreadsheet&#45;style column label to an integer index." alt="" coords="512,55,607,80"/>
+<area shape="rect" id="Node000002" href="$csv__io_8cpp.html#aedb8680ec1d38d2d1f2c08fdc66c0642" title="Read a single cell value from a CSV file." alt="" coords="369,55,464,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="498,70,464,70,464,65,498,65"/>
+<area shape="rect" id="Node000003" href="$csv__io_8cpp.html#a58cf624aa5ee8a014b6985f1656f3b56" title="Compare two CSV cell values as doubles." alt="" coords="160,5,321,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="357,53,286,33,288,28,358,48"/>
+<area shape="rect" id="Node000005" href="$csv__io_8cpp.html#a5f52f77256c041058fb6174a619d3fea" title="Read a rectangular block of CSV data into a numeric array." alt="" coords="203,55,278,80"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="355,70,278,70,278,65,355,65"/>
+<area shape="rect" id="Node000006" href="$util_8cpp.html#a2e5bc5d22d9fcb8236c3393fc8fb8a4a" title="Read vehicle configuration data from a CSV file." alt="" coords="177,104,304,129"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="358,86,288,106,286,101,357,81"/>
+<area shape="rect" id="Node000004" href="$csv__io_8cpp.html#a551fa0e6b358c7fd01a993438ab96434" title="Compare two rectangular regions of CSV data." alt="" coords="5,5,112,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="146,21,112,21,112,15,146,15"/>
+</map>

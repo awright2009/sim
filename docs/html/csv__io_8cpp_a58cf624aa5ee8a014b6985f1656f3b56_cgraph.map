@@ -1,0 +1,7 @@
+<map id="compareCSVCellDouble" name="compareCSVCellDouble">
+<area shape="rect" id="Node000001" title="Compare two CSV cell values as doubles." alt="" coords="5,5,167,31"/>
+<area shape="rect" id="Node000002" href="$csv__io_8cpp.html#aedb8680ec1d38d2d1f2c08fdc66c0642" title="Read a single cell value from a CSV file." alt="" coords="215,5,309,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,15,201,15,201,21,167,21"/>
+<area shape="rect" id="Node000003" href="$csv__io_8cpp.html#a675636f20702c1cb56ef73639fb96609" title="Convert a spreadsheet&#45;style column label to an integer index." alt="" coords="357,5,452,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="310,15,344,15,344,21,310,21"/>
+</map>

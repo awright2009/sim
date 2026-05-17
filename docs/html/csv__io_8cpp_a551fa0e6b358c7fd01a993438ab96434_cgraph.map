@@ -1,0 +1,11 @@
+<map id="CompareArray" name="CompareArray">
+<area shape="rect" id="Node000001" title="Compare two rectangular regions of CSV data." alt="" coords="5,31,112,56"/>
+<area shape="rect" id="Node000002" href="$csv__io_8cpp.html#a58cf624aa5ee8a014b6985f1656f3b56" title="Compare two CSV cell values as doubles." alt="" coords="160,5,321,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,33,146,28,147,34,113,39"/>
+<area shape="rect" id="Node000005" href="$csv__io_8cpp.html#a2bf72ace46bdc4a9013438823df3d38d" title="Convert a numeric column index to spreadsheet&#45;style notation." alt="" coords="193,55,288,80"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="113,48,180,57,180,62,112,53"/>
+<area shape="rect" id="Node000003" href="$csv__io_8cpp.html#aedb8680ec1d38d2d1f2c08fdc66c0642" title="Read a single cell value from a CSV file." alt="" coords="369,5,464,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="322,15,355,15,355,21,322,21"/>
+<area shape="rect" id="Node000004" href="$csv__io_8cpp.html#a675636f20702c1cb56ef73639fb96609" title="Convert a spreadsheet&#45;style column label to an integer index." alt="" coords="512,5,607,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="464,15,498,15,498,21,464,21"/>
+</map>

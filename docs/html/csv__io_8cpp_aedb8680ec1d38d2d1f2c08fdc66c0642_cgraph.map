@@ -1,0 +1,5 @@
+<map id="readCSVCell" name="readCSVCell">
+<area shape="rect" id="Node000001" title="Read a single cell value from a CSV file." alt="" coords="5,5,100,31"/>
+<area shape="rect" id="Node000002" href="$csv__io_8cpp.html#a675636f20702c1cb56ef73639fb96609" title="Convert a spreadsheet&#45;style column label to an integer index." alt="" coords="148,5,243,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,15,134,15,134,21,100,21"/>
+</map>

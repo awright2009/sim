@@ -1,3 +1,19 @@
+/**
+ * @file csv_io.cpp
+ * @brief CSV file parsing and spreadsheet-style cell access utilities.
+ *
+ * This source file implements functions for:
+ * - Loading text and CSV files into memory
+ * - Tokenizing newline-delimited file contents
+ * - Accessing CSV cells using spreadsheet-style coordinates
+ * - Converting between integer and base-26 column notation
+ * - Extracting numeric arrays from CSV data
+ * - Comparing CSV values and matrix regions
+ *
+ * The implementation supports lightweight CSV parsing and numeric
+ * validation utilities for test and simulation workflows.
+ */
+
 #include "csv_io.h"
 #ifdef __linux__
 #include <unistd.h>

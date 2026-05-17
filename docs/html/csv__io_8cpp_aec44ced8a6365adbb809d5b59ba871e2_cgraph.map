@@ -1,0 +1,5 @@
+<map id="newlinelist" name="newlinelist">
+<area shape="rect" id="Node000001" title="Read a text file and split it into newline&#45;delimited strings." alt="" coords="5,5,88,31"/>
+<area shape="rect" id="Node000002" href="$csv__io_8cpp.html#af835242a83d52797424067b92c7c8161" title="Read an entire file into memory." alt="" coords="136,5,200,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,15,122,15,122,21,88,21"/>
+</map>
