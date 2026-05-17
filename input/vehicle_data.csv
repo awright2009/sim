@@ -1,0 +1,7 @@
+Company Name, Cruise Speed, Battery Capacity, Charge Time, Energy Usage Cruise, Passenger Count, Fault Probability
+ALPHA,   120, 320, 0.60, 1.6, 4, 0.25
+BRAVO,   100, 100, 0.20, 1.5, 5, 0.10
+CHARLIE, 160, 220, 0.80, 2.2, 3, 0.05
+DELTA,    90, 120, 0.62, 0.8, 2, 0.22
+ECHO,     30, 150, 0.30, 5.8, 2, 0.61
+
