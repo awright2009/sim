@@ -1,3 +1,25 @@
+/**
+ * @file util.cpp
+ * @brief Utility functions for simulation configuration and statistics output.
+ *
+ * This source file implements helper functions for:
+ * - Reading vehicle configuration data from CSV files
+ * - Parsing vehicle operational parameters
+ * - Generating simulation statistics reports
+ * - Exporting per-vehicle and per-company aggregated metrics
+ *
+ * Generated statistics include:
+ * - Average flight time
+ * - Average flight distance
+ * - Average charging duration
+ * - Fault totals
+ * - Passenger miles traveled
+ *
+ * CSV output files:
+ * - vehicle_stats.csv
+ * - type_stats.csv
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

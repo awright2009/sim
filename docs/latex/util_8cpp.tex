@@ -1,0 +1,151 @@
+\doxysection{src/util.cpp File Reference}
+\hypertarget{util_8cpp}{}\label{util_8cpp}\index{src/util.cpp@{src/util.cpp}}
+
+
+Utility functions for simulation configuration and statistics output.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include "{}sim.\+h"{}}\newline
+{\ttfamily \#include "{}csv\+\_\+io.\+h"{}}\newline
+{\ttfamily \#include "{}util.\+h"{}}\newline
+Include dependency graph for util.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{util_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{util_8cpp_aa4b94552ed8a2f9eda61847846cd8e00}{write\+\_\+stats}} (\mbox{\hyperlink{structstats__t}{stats\+\_\+t}} \texorpdfstring{$\ast$}{*}stats, int num\+\_\+stat)
+\begin{DoxyCompactList}\small\item\em Write simulation statistics. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{util_8cpp_a2e5bc5d22d9fcb8236c3393fc8fb8a4a}{read\+\_\+vehicle\+\_\+data}} (\mbox{\hyperlink{structvehicle__data__t}{vehicle\+\_\+data\+\_\+t}} \texorpdfstring{$\ast$}{*}types, char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Read vehicle configuration data from a CSV file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Utility functions for simulation configuration and statistics output. 
+
+This source file implements helper functions for\+:
+\begin{DoxyItemize}
+\item Reading vehicle configuration data from CSV files
+\item Parsing vehicle operational parameters
+\item Generating simulation statistics reports
+\item Exporting per-\/vehicle and per-\/company aggregated metrics
+\end{DoxyItemize}
+
+Generated statistics include\+:
+\begin{DoxyItemize}
+\item Average flight time
+\item Average flight distance
+\item Average charging duration
+\item Fault totals
+\item Passenger miles traveled
+\end{DoxyItemize}
+
+CSV output files\+:
+\begin{DoxyItemize}
+\item vehicle\+\_\+stats.\+csv
+\item type\+\_\+stats.\+csv 
+\end{DoxyItemize}
+
+\doxysubsection{Function Documentation}
+\Hypertarget{util_8cpp_a2e5bc5d22d9fcb8236c3393fc8fb8a4a}\index{util.cpp@{util.cpp}!read\_vehicle\_data@{read\_vehicle\_data}}
+\index{read\_vehicle\_data@{read\_vehicle\_data}!util.cpp@{util.cpp}}
+\doxysubsubsection{\texorpdfstring{read\_vehicle\_data()}{read\_vehicle\_data()}}
+{\footnotesize\ttfamily \label{util_8cpp_a2e5bc5d22d9fcb8236c3393fc8fb8a4a} 
+int read\+\_\+vehicle\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvehicle__data__t}{vehicle\+\_\+data\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{types}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Read vehicle configuration data from a CSV file. 
+
+Opens the specified CSV file, reads all vehicle data entries, and populates an array of \doxylink{structvehicle__data__t}{vehicle\+\_\+data\+\_\+t} structures with the parsed values. Each row in the CSV corresponds to one vehicle definition.
+
+Expected CSV column order\+:
+\begin{DoxyItemize}
+\item Column A\+: Company name
+\item Column B\+: Cruise speed
+\item Column C\+: Battery capacity
+\item Column D\+: Charge time
+\item Column E\+: Cruise energy usage
+\item Column F\+: Passenger count
+\item Column G\+: Fault probability
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em types} & Pointer to an array of \doxylink{structvehicle__data__t}{vehicle\+\_\+data\+\_\+t} structures to populate. \\
+\hline
+{\em filename} & Path to the CSV file containing vehicle data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{util_8cpp_a2e5bc5d22d9fcb8236c3393fc8fb8a4a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{util_8cpp_a2e5bc5d22d9fcb8236c3393fc8fb8a4a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{util_8cpp_aa4b94552ed8a2f9eda61847846cd8e00}\index{util.cpp@{util.cpp}!write\_stats@{write\_stats}}
+\index{write\_stats@{write\_stats}!util.cpp@{util.cpp}}
+\doxysubsubsection{\texorpdfstring{write\_stats()}{write\_stats()}}
+{\footnotesize\ttfamily \label{util_8cpp_aa4b94552ed8a2f9eda61847846cd8e00} 
+void write\+\_\+stats (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstats__t}{stats\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{stats}{, }\item[{int}]{num\+\_\+stat}{}\end{DoxyParamCaption})}
+
+
+
+Write simulation statistics. 
+
+Generate both per-\/vehicle and aggregated per-\/company simulation statistics in CSV output format.
+
+Statistics include\+:
+\begin{DoxyItemize}
+\item average flight time
+\item average distance per flight
+\item average charging duration
+\item total faults
+\item passenger miles
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em stats} & Pointer to statistics array. \\
+\hline
+{\em num\+\_\+stat} & Number of statistics entries. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{util_8cpp_aa4b94552ed8a2f9eda61847846cd8e00_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{util_8cpp_aa4b94552ed8a2f9eda61847846cd8e00_icgraph}
+\end{center}
+\end{figure}
