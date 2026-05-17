@@ -105,24 +105,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6cf19bf06affe3e5639597f9c3e2d95e" id="r_a6cf19bf06affe3e5639597f9c3e2d95e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6cf19bf06affe3e5639597f9c3e2d95e">step</a> ()</td></tr>
 <tr class="memdesc:a6cf19bf06affe3e5639597f9c3e2d95e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute one simulation step.  <br /></td></tr>
 <tr class="separator:a6cf19bf06affe3e5639597f9c3e2d95e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab45dcd43dfcffda3e9792a6ecbd38763" id="r_ab45dcd43dfcffda3e9792a6ecbd38763"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab45dcd43dfcffda3e9792a6ecbd38763">step_airborne</a> (int vehicle)</td></tr>
-<tr class="memdesc:ab45dcd43dfcffda3e9792a6ecbd38763"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process one airborne simulation step for a vehicle.  <br /></td></tr>
-<tr class="separator:ab45dcd43dfcffda3e9792a6ecbd38763"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59fa98b8915d103611ff25ebd8595c4e" id="r_a59fa98b8915d103611ff25ebd8595c4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59fa98b8915d103611ff25ebd8595c4e">step_charging</a> (int vehicle)</td></tr>
-<tr class="memdesc:a59fa98b8915d103611ff25ebd8595c4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process one charging simulation step for a vehicle.  <br /></td></tr>
-<tr class="separator:a59fa98b8915d103611ff25ebd8595c4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d9c65bef9f4510fb7abe9da6ecbd83e" id="r_a7d9c65bef9f4510fb7abe9da6ecbd83e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d9c65bef9f4510fb7abe9da6ecbd83e">step_ground</a> (int vehicle)</td></tr>
-<tr class="memdesc:a7d9c65bef9f4510fb7abe9da6ecbd83e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process one grounded simulation step for a vehicle.  <br /></td></tr>
-<tr class="separator:a7d9c65bef9f4510fb7abe9da6ecbd83e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e4c1f3ca874f652ff4bde72c015623d" id="r_a5e4c1f3ca874f652ff4bde72c015623d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e4c1f3ca874f652ff4bde72c015623d">process_queue_head</a> (unsigned int vehicle)</td></tr>
-<tr class="memdesc:a5e4c1f3ca874f652ff4bde72c015623d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes the vehicle at the head of the charger queue.  <br /></td></tr>
-<tr class="separator:a5e4c1f3ca874f652ff4bde72c015623d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae87544f1d073454738f4f8f65a44af6" id="r_aae87544f1d073454738f4f8f65a44af6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae87544f1d073454738f4f8f65a44af6">enqueue_vehicle</a> (unsigned int vehicle)</td></tr>
-<tr class="memdesc:aae87544f1d073454738f4f8f65a44af6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a vehicle to the charger queue if not already queued.  <br /></td></tr>
-<tr class="separator:aae87544f1d073454738f4f8f65a44af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c4abcb221b1129be4229dea7609024b" id="r_a8c4abcb221b1129be4229dea7609024b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c4abcb221b1129be4229dea7609024b">try_assign_charger</a> (unsigned int vehicle)</td></tr>
-<tr class="memdesc:a8c4abcb221b1129be4229dea7609024b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to assign a free charger to a vehicle.  <br /></td></tr>
-<tr class="separator:a8c4abcb221b1129be4229dea7609024b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe643430e5133d60e876a46a18513094" id="r_abe643430e5133d60e876a46a18513094"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe643430e5133d60e876a46a18513094">destroy</a> ()</td></tr>
 <tr class="memdesc:abe643430e5133d60e876a46a18513094"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy simulation resources.  <br /></td></tr>
 <tr class="separator:abe643430e5133d60e876a46a18513094"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -211,59 +193,6 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="aae87544f1d073454738f4f8f65a44af6" name="aae87544f1d073454738f4f8f65a44af6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae87544f1d073454738f4f8f65a44af6">&#9670;&#160;</a></span>enqueue_vehicle()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void sim::enqueue_vehicle </td>
-          <td>(</td>
-          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>vehicle</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Adds a vehicle to the charger queue if not already queued. </p>
-<p>Checks whether the specified vehicle is already waiting in the charging queue. If not, the vehicle is appended to the FIFO queue and its runtime state is updated to indicate that it is currently waiting in line for a charger.</p>
-<p>When debug output is enabled, queue activity and charger status information are printed to the console.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">vehicle</td><td>Index of the vehicle to enqueue. </td></tr>
-  </table>
-  </dd>
-</dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classsim_aae87544f1d073454738f4f8f65a44af6_cgraph.png" border="0" usemap="#aclasssim_aae87544f1d073454738f4f8f65a44af6_cgraph" alt=""/></div>
-<map name="aclasssim_aae87544f1d073454738f4f8f65a44af6_cgraph" id="aclasssim_aae87544f1d073454738f4f8f65a44af6_cgraph">
-<area shape="rect" title="Adds a vehicle to the charger queue if not already queued." alt="" coords="5,31,152,56"/>
-<area shape="rect" href="queue_8cpp.html#a582391f0b9f7d1888fb0984d0c3dcd9f" title="Add data to the back of the queue." alt="" coords="209,5,280,31"/>
-<area shape="poly" title=" " alt="" coords="152,30,195,23,196,28,153,35"/>
-<area shape="rect" href="queue_8cpp.html#af5bc88810b033ff91a00e9ecffd2b356" title="Print the current queue contents and state." alt="" coords="200,55,289,80"/>
-<area shape="poly" title=" " alt="" coords="153,51,187,56,186,62,152,57"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classsim_aae87544f1d073454738f4f8f65a44af6_icgraph.png" border="0" usemap="#aclasssim_aae87544f1d073454738f4f8f65a44af6_icgraph" alt=""/></div>
-<map name="aclasssim_aae87544f1d073454738f4f8f65a44af6_icgraph" id="aclasssim_aae87544f1d073454738f4f8f65a44af6_icgraph">
-<area shape="rect" title="Adds a vehicle to the charger queue if not already queued." alt="" coords="399,5,545,31"/>
-<area shape="rect" href="classsim.html#a7d9c65bef9f4510fb7abe9da6ecbd83e" title="Process one grounded simulation step for a vehicle." alt="" coords="228,5,351,31"/>
-<area shape="poly" title=" " alt="" coords="385,21,351,21,351,15,385,15"/>
-<area shape="rect" href="classsim.html#a6cf19bf06affe3e5639597f9c3e2d95e" title="Execute one simulation step." alt="" coords="104,5,180,31"/>
-<area shape="poly" title=" " alt="" coords="215,21,180,21,180,15,215,15"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Program entry point." alt="" coords="5,5,56,31"/>
-<area shape="poly" title=" " alt="" coords="90,21,56,21,56,15,90,15"/>
-</map>
-</div>
-
-</div>
-</div>
 <a id="a9fcfcbb706cd13165039d44a6122fba7" name="a9fcfcbb706cd13165039d44a6122fba7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9fcfcbb706cd13165039d44a6122fba7">&#9670;&#160;</a></span>init()</h2>
 
@@ -324,65 +253,6 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a5e4c1f3ca874f652ff4bde72c015623d" name="a5e4c1f3ca874f652ff4bde72c015623d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e4c1f3ca874f652ff4bde72c015623d">&#9670;&#160;</a></span>process_queue_head()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool sim::process_queue_head </td>
-          <td>(</td>
-          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>vehicle</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Processes the vehicle at the head of the charger queue. </p>
-<p>Checks whether the specified vehicle is currently first in the charger queue. If the vehicle is not at the front of the queue, the function returns immediately.</p>
-<p>If the vehicle is first in line, the function attempts to assign an available charger using <a class="el" href="#a8c4abcb221b1129be4229dea7609024b" title="Attempts to assign a free charger to a vehicle.">try_assign_charger()</a>. Upon successful charger assignment, the vehicle is removed from the queue and its queue state flag is cleared.</p>
-<p>A runtime consistency check validates that the dequeued vehicle matches the expected vehicle. The program terminates if a queue mismatch is detected.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">vehicle</td><td>Index of the vehicle attempting to acquire a charger.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true Vehicle was at the head of the queue. </dd>
-<dd>
-false Vehicle was not at the head of the queue. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classsim_a5e4c1f3ca874f652ff4bde72c015623d_cgraph.png" border="0" usemap="#aclasssim_a5e4c1f3ca874f652ff4bde72c015623d_cgraph" alt=""/></div>
-<map name="aclasssim_a5e4c1f3ca874f652ff4bde72c015623d_cgraph" id="aclasssim_a5e4c1f3ca874f652ff4bde72c015623d_cgraph">
-<area shape="rect" title="Processes the vehicle at the head of the charger queue." alt="" coords="5,55,180,80"/>
-<area shape="rect" href="queue_8cpp.html#a56fbdf37b01e0a5787a9654c04dca6fe" title="Remove data from the front of the queue." alt="" coords="274,5,345,31"/>
-<area shape="poly" title=" " alt="" coords="149,52,260,26,261,32,150,57"/>
-<area shape="rect" href="queue_8cpp.html#a9d0efb861861c451c0e00661807a38d3" title="Peek at queue data without removing it." alt="" coords="256,55,363,80"/>
-<area shape="poly" title=" " alt="" coords="180,65,242,65,242,70,180,70"/>
-<area shape="rect" href="classsim.html#a8c4abcb221b1129be4229dea7609024b" title="Attempts to assign a free charger to a vehicle." alt="" coords="228,104,391,129"/>
-<area shape="poly" title=" " alt="" coords="150,77,240,98,239,104,149,83"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classsim_a5e4c1f3ca874f652ff4bde72c015623d_icgraph.png" border="0" usemap="#aclasssim_a5e4c1f3ca874f652ff4bde72c015623d_icgraph" alt=""/></div>
-<map name="aclasssim_a5e4c1f3ca874f652ff4bde72c015623d_icgraph" id="aclasssim_a5e4c1f3ca874f652ff4bde72c015623d_icgraph">
-<area shape="rect" title="Processes the vehicle at the head of the charger queue." alt="" coords="399,5,573,31"/>
-<area shape="rect" href="classsim.html#a7d9c65bef9f4510fb7abe9da6ecbd83e" title="Process one grounded simulation step for a vehicle." alt="" coords="228,5,351,31"/>
-<area shape="poly" title=" " alt="" coords="385,21,351,21,351,15,385,15"/>
-<area shape="rect" href="classsim.html#a6cf19bf06affe3e5639597f9c3e2d95e" title="Execute one simulation step." alt="" coords="104,5,180,31"/>
-<area shape="poly" title=" " alt="" coords="215,21,180,21,180,15,215,15"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Program entry point." alt="" coords="5,5,56,31"/>
-<area shape="poly" title=" " alt="" coords="90,21,56,21,56,15,90,15"/>
-</map>
-</div>
-
-</div>
-</div>
 <a id="a6cf19bf06affe3e5639597f9c3e2d95e" name="a6cf19bf06affe3e5639597f9c3e2d95e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6cf19bf06affe3e5639597f9c3e2d95e">&#9670;&#160;</a></span>step()</h2>
 
@@ -405,32 +275,11 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classsim_a6cf19bf06affe3e5639597f9c3e2d95e_cgraph.png" border="0" usemap="#aclasssim_a6cf19bf06affe3e5639597f9c3e2d95e_cgraph" alt=""/></div>
 <map name="aclasssim_a6cf19bf06affe3e5639597f9c3e2d95e_cgraph" id="aclasssim_a6cf19bf06affe3e5639597f9c3e2d95e_cgraph">
-<area shape="rect" title="Execute one simulation step." alt="" coords="5,104,81,129"/>
+<area shape="rect" title="Execute one simulation step." alt="" coords="5,31,81,56"/>
 <area shape="rect" href="types_8cpp.html#a239a85a48af4b690b5588962296b05f0" title="Convert a company enumeration value to a string." alt="" coords="141,5,270,31"/>
-<area shape="poly" title=" " alt="" coords="54,102,86,71,128,40,141,33,143,38,131,44,89,75,58,106"/>
-<area shape="rect" href="classsim.html#ab45dcd43dfcffda3e9792a6ecbd38763" title="Process one airborne simulation step for a vehicle." alt="" coords="140,55,271,80"/>
-<area shape="poly" title=" " alt="" coords="81,103,149,82,151,87,82,108"/>
-<area shape="rect" href="classsim.html#a59fa98b8915d103611ff25ebd8595c4e" title="Process one charging simulation step for a vehicle." alt="" coords="139,104,271,129"/>
-<area shape="poly" title=" " alt="" coords="82,114,126,114,126,119,82,119"/>
-<area shape="rect" href="classsim.html#a7d9c65bef9f4510fb7abe9da6ecbd83e" title="Process one grounded simulation step for a vehicle." alt="" coords="144,153,267,179"/>
-<area shape="poly" title=" " alt="" coords="82,126,151,147,149,152,81,131"/>
-<area shape="rect" href="types_8cpp.html#a2a45b0ae4928ad008112ffb14bbe30a3" title="Convert a vehicle state enumeration value to a string." alt="" coords="129,203,281,228"/>
-<area shape="poly" title=" " alt="" coords="58,128,89,158,131,189,143,195,141,200,128,194,86,162,54,131"/>
-<area shape="rect" href="classsim.html#aae87544f1d073454738f4f8f65a44af6" title="Adds a vehicle to the charger queue if not already queued." alt="" coords="343,56,490,81"/>
-<area shape="poly" title=" " alt="" coords="247,151,280,138,381,86,384,91,282,143,249,156"/>
-<area shape="rect" href="classsim.html#a5e4c1f3ca874f652ff4bde72c015623d" title="Processes the vehicle at the head of the charger queue." alt="" coords="329,153,504,179"/>
-<area shape="poly" title=" " alt="" coords="267,163,315,163,315,169,267,169"/>
-<area shape="rect" href="classsim.html#a8c4abcb221b1129be4229dea7609024b" title="Attempts to assign a free charger to a vehicle." alt="" coords="552,204,715,229"/>
-<area shape="poly" title=" " alt="" coords="262,176,330,189,437,201,538,209,538,214,437,206,329,194,261,181"/>
-<area shape="rect" href="queue_8cpp.html#a582391f0b9f7d1888fb0984d0c3dcd9f" title="Add data to the back of the queue." alt="" coords="598,7,669,32"/>
-<area shape="poly" title=" " alt="" coords="473,53,584,28,585,33,474,59"/>
-<area shape="rect" href="queue_8cpp.html#af5bc88810b033ff91a00e9ecffd2b356" title="Print the current queue contents and state." alt="" coords="589,56,678,81"/>
-<area shape="poly" title=" " alt="" coords="490,66,575,66,575,71,490,71"/>
-<area shape="rect" href="queue_8cpp.html#a56fbdf37b01e0a5787a9654c04dca6fe" title="Remove data from the front of the queue." alt="" coords="598,105,669,131"/>
-<area shape="poly" title=" " alt="" coords="474,151,584,126,585,131,475,156"/>
-<area shape="rect" href="queue_8cpp.html#a9d0efb861861c451c0e00661807a38d3" title="Peek at queue data without removing it." alt="" coords="580,155,687,180"/>
-<area shape="poly" title=" " alt="" coords="504,164,566,164,566,170,504,169"/>
-<area shape="poly" title=" " alt="" coords="473,176,566,198,564,203,471,181"/>
+<area shape="poly" title=" " alt="" coords="81,35,127,28,128,33,82,40"/>
+<area shape="rect" href="types_8cpp.html#a2a45b0ae4928ad008112ffb14bbe30a3" title="Convert a vehicle state enumeration value to a string." alt="" coords="129,55,281,80"/>
+<area shape="poly" title=" " alt="" coords="82,46,116,51,115,57,81,52"/>
 </map>
 </div>
 <div class="dynheader">
@@ -441,190 +290,6 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title="Execute one simulation step." alt="" coords="104,5,180,31"/>
 <area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Program entry point." alt="" coords="5,5,56,31"/>
 <area shape="poly" title=" " alt="" coords="90,21,56,21,56,15,90,15"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="ab45dcd43dfcffda3e9792a6ecbd38763" name="ab45dcd43dfcffda3e9792a6ecbd38763"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab45dcd43dfcffda3e9792a6ecbd38763">&#9670;&#160;</a></span>step_airborne()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void sim::step_airborne </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>vehicle</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Process one airborne simulation step for a vehicle. </p>
-<p>Consumes battery energy while the vehicle is airborne. If the battery is depleted, the vehicle transitions to the GROUND state.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">vehicle</td><td>Vehicle index. </td></tr>
-  </table>
-  </dd>
-</dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classsim_ab45dcd43dfcffda3e9792a6ecbd38763_icgraph.png" border="0" usemap="#aclasssim_ab45dcd43dfcffda3e9792a6ecbd38763_icgraph" alt=""/></div>
-<map name="aclasssim_ab45dcd43dfcffda3e9792a6ecbd38763_icgraph" id="aclasssim_ab45dcd43dfcffda3e9792a6ecbd38763_icgraph">
-<area shape="rect" title="Process one airborne simulation step for a vehicle." alt="" coords="228,5,359,31"/>
-<area shape="rect" href="classsim.html#a6cf19bf06affe3e5639597f9c3e2d95e" title="Execute one simulation step." alt="" coords="104,5,180,31"/>
-<area shape="poly" title=" " alt="" coords="214,21,180,21,180,15,214,15"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Program entry point." alt="" coords="5,5,56,31"/>
-<area shape="poly" title=" " alt="" coords="90,21,56,21,56,15,90,15"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a59fa98b8915d103611ff25ebd8595c4e" name="a59fa98b8915d103611ff25ebd8595c4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59fa98b8915d103611ff25ebd8595c4e">&#9670;&#160;</a></span>step_charging()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void sim::step_charging </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>vehicle</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Process one charging simulation step for a vehicle. </p>
-<p>Charges the vehicle battery incrementally until full. Once fully charged, the vehicle transitions back to the AIRBORNE state.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">vehicle</td><td>Vehicle index. </td></tr>
-  </table>
-  </dd>
-</dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classsim_a59fa98b8915d103611ff25ebd8595c4e_icgraph.png" border="0" usemap="#aclasssim_a59fa98b8915d103611ff25ebd8595c4e_icgraph" alt=""/></div>
-<map name="aclasssim_a59fa98b8915d103611ff25ebd8595c4e_icgraph" id="aclasssim_a59fa98b8915d103611ff25ebd8595c4e_icgraph">
-<area shape="rect" title="Process one charging simulation step for a vehicle." alt="" coords="228,5,360,31"/>
-<area shape="rect" href="classsim.html#a6cf19bf06affe3e5639597f9c3e2d95e" title="Execute one simulation step." alt="" coords="104,5,180,31"/>
-<area shape="poly" title=" " alt="" coords="214,21,180,21,180,15,214,15"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Program entry point." alt="" coords="5,5,56,31"/>
-<area shape="poly" title=" " alt="" coords="90,21,56,21,56,15,90,15"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a7d9c65bef9f4510fb7abe9da6ecbd83e" name="a7d9c65bef9f4510fb7abe9da6ecbd83e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d9c65bef9f4510fb7abe9da6ecbd83e">&#9670;&#160;</a></span>step_ground()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void sim::step_ground </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>vehicle</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Process one grounded simulation step for a vehicle. </p>
-<p>Attempts to assign the vehicle to a charging station. If all chargers are occupied, the vehicle enters the charging queue.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">vehicle</td><td>Vehicle index. </td></tr>
-    <tr><td class="paramname">debug</td><td>Enable verbose debug printing. </td></tr>
-  </table>
-  </dd>
-</dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classsim_a7d9c65bef9f4510fb7abe9da6ecbd83e_cgraph.png" border="0" usemap="#aclasssim_a7d9c65bef9f4510fb7abe9da6ecbd83e_cgraph" alt=""/></div>
-<map name="aclasssim_a7d9c65bef9f4510fb7abe9da6ecbd83e_cgraph" id="aclasssim_a7d9c65bef9f4510fb7abe9da6ecbd83e_cgraph">
-<area shape="rect" title="Process one grounded simulation step for a vehicle." alt="" coords="5,152,128,177"/>
-<area shape="rect" href="classsim.html#aae87544f1d073454738f4f8f65a44af6" title="Adds a vehicle to the charger queue if not already queued." alt="" coords="190,55,337,80"/>
-<area shape="poly" title=" " alt="" coords="92,150,223,84,226,89,95,154"/>
-<area shape="rect" href="classsim.html#a5e4c1f3ca874f652ff4bde72c015623d" title="Processes the vehicle at the head of the charger queue." alt="" coords="176,152,351,177"/>
-<area shape="poly" title=" " alt="" coords="128,162,162,162,162,167,128,167"/>
-<area shape="rect" href="classsim.html#a8c4abcb221b1129be4229dea7609024b" title="Attempts to assign a free charger to a vehicle." alt="" coords="399,203,561,228"/>
-<area shape="poly" title=" " alt="" coords="116,175,176,187,284,201,385,208,385,214,284,206,176,193,115,180"/>
-<area shape="rect" href="queue_8cpp.html#a582391f0b9f7d1888fb0984d0c3dcd9f" title="Add data to the back of the queue." alt="" coords="445,5,515,31"/>
-<area shape="poly" title=" " alt="" coords="319,52,431,26,432,32,320,57"/>
-<area shape="rect" href="queue_8cpp.html#af5bc88810b033ff91a00e9ecffd2b356" title="Print the current queue contents and state." alt="" coords="435,55,525,80"/>
-<area shape="poly" title=" " alt="" coords="337,65,422,65,422,70,337,70"/>
-<area shape="rect" href="queue_8cpp.html#a56fbdf37b01e0a5787a9654c04dca6fe" title="Remove data from the front of the queue." alt="" coords="445,104,515,129"/>
-<area shape="poly" title=" " alt="" coords="321,149,431,125,432,130,322,155"/>
-<area shape="rect" href="queue_8cpp.html#a9d0efb861861c451c0e00661807a38d3" title="Peek at queue data without removing it." alt="" coords="427,153,533,179"/>
-<area shape="poly" title=" " alt="" coords="351,163,413,163,413,168,351,168"/>
-<area shape="poly" title=" " alt="" coords="319,175,412,197,411,202,318,180"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classsim_a7d9c65bef9f4510fb7abe9da6ecbd83e_icgraph.png" border="0" usemap="#aclasssim_a7d9c65bef9f4510fb7abe9da6ecbd83e_icgraph" alt=""/></div>
-<map name="aclasssim_a7d9c65bef9f4510fb7abe9da6ecbd83e_icgraph" id="aclasssim_a7d9c65bef9f4510fb7abe9da6ecbd83e_icgraph">
-<area shape="rect" title="Process one grounded simulation step for a vehicle." alt="" coords="228,5,351,31"/>
-<area shape="rect" href="classsim.html#a6cf19bf06affe3e5639597f9c3e2d95e" title="Execute one simulation step." alt="" coords="104,5,180,31"/>
-<area shape="poly" title=" " alt="" coords="215,21,180,21,180,15,215,15"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Program entry point." alt="" coords="5,5,56,31"/>
-<area shape="poly" title=" " alt="" coords="90,21,56,21,56,15,90,15"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a8c4abcb221b1129be4229dea7609024b" name="a8c4abcb221b1129be4229dea7609024b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c4abcb221b1129be4229dea7609024b">&#9670;&#160;</a></span>try_assign_charger()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool sim::try_assign_charger </td>
-          <td>(</td>
-          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>vehicle</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Attempts to assign a free charger to a vehicle. </p>
-<p>Iterates through all charging stations searching for an available charger. If a free charger is found, the charger state is updated to occupied and assigned to the specified vehicle. The vehicle runtime state is also updated to indicate that it is currently charging.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">vehicle</td><td>Index of the vehicle requesting a charger.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true A charger was successfully assigned to the vehicle. </dd>
-<dd>
-false No chargers were available. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classsim_a8c4abcb221b1129be4229dea7609024b_icgraph.png" border="0" usemap="#aclasssim_a8c4abcb221b1129be4229dea7609024b_icgraph" alt=""/></div>
-<map name="aclasssim_a8c4abcb221b1129be4229dea7609024b_icgraph" id="aclasssim_a8c4abcb221b1129be4229dea7609024b_icgraph">
-<area shape="rect" title="Attempts to assign a free charger to a vehicle." alt="" coords="621,31,784,56"/>
-<area shape="rect" href="classsim.html#a5e4c1f3ca874f652ff4bde72c015623d" title="Processes the vehicle at the head of the charger queue." alt="" coords="399,5,573,31"/>
-<area shape="poly" title=" " alt="" coords="607,35,573,31,574,26,608,30"/>
-<area shape="rect" href="classsim.html#a7d9c65bef9f4510fb7abe9da6ecbd83e" title="Process one grounded simulation step for a vehicle." alt="" coords="228,31,351,56"/>
-<area shape="poly" title=" " alt="" coords="607,46,351,46,351,41,607,41"/>
-<area shape="poly" title=" " alt="" coords="385,34,351,38,351,33,385,28"/>
-<area shape="rect" href="classsim.html#a6cf19bf06affe3e5639597f9c3e2d95e" title="Execute one simulation step." alt="" coords="104,31,180,56"/>
-<area shape="poly" title=" " alt="" coords="215,46,180,46,180,41,215,41"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Program entry point." alt="" coords="5,31,56,56"/>
-<area shape="poly" title=" " alt="" coords="90,46,56,46,56,41,90,41"/>
 </map>
 </div>
 

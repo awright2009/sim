@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['enqueue_0',['enqueue',['../queue_8cpp.html#a582391f0b9f7d1888fb0984d0c3dcd9f',1,'queue.cpp']]],
-  ['enqueue_5ffront_1',['enqueue_front',['../queue_8cpp.html#a82526b8007d9a7ee8d6fc660a4170684',1,'queue.cpp']]],
-  ['enqueue_5fvehicle_2',['enqueue_vehicle',['../classsim.html#aae87544f1d073454738f4f8f65a44af6',1,'sim']]]
+  ['dequeue_0',['dequeue',['../queue_8cpp.html#a56fbdf37b01e0a5787a9654c04dca6fe',1,'dequeue(queue_t *queue, unsigned char *buffer, int size):&#160;queue.cpp'],['../queue_8h.html#a56fbdf37b01e0a5787a9654c04dca6fe',1,'dequeue(queue_t *queue, unsigned char *buffer, int size):&#160;queue.cpp']]],
+  ['dequeue_5fpeek_1',['dequeue_peek',['../queue_8cpp.html#a9d0efb861861c451c0e00661807a38d3',1,'dequeue_peek(queue_t *queue, unsigned char *buffer, int size):&#160;queue.cpp'],['../queue_8h.html#a9d0efb861861c451c0e00661807a38d3',1,'dequeue_peek(queue_t *queue, unsigned char *buffer, int size):&#160;queue.cpp']]],
+  ['destroy_2',['destroy',['../classsim.html#abe643430e5133d60e876a46a18513094',1,'sim']]]
 ];

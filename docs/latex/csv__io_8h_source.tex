@@ -1,40 +1,41 @@
 \doxysection{csv\+\_\+io.\+h}
 \hypertarget{csv__io_8h_source}{}\label{csv__io_8h_source}\index{include/csv\_io.h@{include/csv\_io.h}}
-
+\mbox{\hyperlink{csv__io_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CSV\_IO}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CSV\_IO}}
-\DoxyCodeLine{00003\ }
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string.h>}}
-\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <math.h>}}
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <time.h>}}
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
-\DoxyCodeLine{00010\ }
-\DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ }
-\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ CSV\_MAX\_ROW\ 1024}}
-\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ MAX\_CSV\_LINE\ 32768}}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
-\DoxyCodeLine{00017\ \{}
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{char}\ *line\_list[CSV\_MAX\_ROW];}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ num\_line;}
-\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{char}\ *pfile;}
-\DoxyCodeLine{00021\ \}\ \mbox{\hyperlink{structcsv__handle__t}{csv\_handle\_t}};}
-\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#ifndef\ CSV\_IO}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ CSV\_IO}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
 \DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \textcolor{keywordtype}{char}\ *get\_file(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filename,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *size);}
-\DoxyCodeLine{00025\ \textcolor{keywordtype}{int}\ OpenCSV(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filename,\ \mbox{\hyperlink{structcsv__handle__t}{csv\_handle\_t}}\ *handle);}
-\DoxyCodeLine{00026\ \textcolor{keywordtype}{int}\ CloseCSV(\mbox{\hyperlink{structcsv__handle__t}{csv\_handle\_t}}\ *handle);}
-\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ IntToBase26(\textcolor{keywordtype}{char}\ *output,\ \textcolor{keywordtype}{int}\ pos);}
-\DoxyCodeLine{00028\ \textcolor{keywordtype}{int}\ Base26ToInt(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *col\_char);}
-\DoxyCodeLine{00029\ \textcolor{keywordtype}{int}\ GetArray(\mbox{\hyperlink{structcsv__handle__t}{csv\_handle\_t}}\ *a,\ \textcolor{keywordtype}{int}\ rbase\_a,\ \textcolor{keywordtype}{int}\ cbase\_a,\ \textcolor{keywordtype}{int}\ rows,\ \textcolor{keywordtype}{int}\ cols,\ \textcolor{keywordtype}{double}\ *data);}
-\DoxyCodeLine{00030\ \textcolor{keywordtype}{int}\ readCSVCell(\textcolor{keyword}{const}\ \mbox{\hyperlink{structcsv__handle__t}{csv\_handle\_t}}\ *handle,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *col\_char,\ \textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{char}\ *value,\ \textcolor{keywordtype}{int}\ length);}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ }
-\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ CSV\_MAX\_ROW\ 1024}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ MAX\_CSV\_LINE\ 32768}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00030\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{char}\ *line\_list[CSV\_MAX\_ROW];}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ num\_line;}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{char}\ *pfile;}
+\DoxyCodeLine{00034\ \}\ \mbox{\hyperlink{structcsv__handle__t}{csv\_handle\_t}};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{csv__io_8h_af835242a83d52797424067b92c7c8161}{get\_file}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filename,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *size);}
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{csv__io_8h_a6fa55ded1cc7e25acf73db34096b5f51}{OpenCSV}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filename,\ \mbox{\hyperlink{structcsv__handle__t}{csv\_handle\_t}}\ *handle);}
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{csv__io_8h_a6cae5b6d9173efd8018f41eb5949e676}{CloseCSV}}(\mbox{\hyperlink{structcsv__handle__t}{csv\_handle\_t}}\ *handle);}
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{csv__io_8h_a2bf72ace46bdc4a9013438823df3d38d}{IntToBase26}}(\textcolor{keywordtype}{char}\ *output,\ \textcolor{keywordtype}{int}\ pos);}
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{csv__io_8h_a675636f20702c1cb56ef73639fb96609}{Base26ToInt}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *col\_char);}
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{csv__io_8h_af9d07525310ced885dbd100c2d1df9f9}{GetArray}}(\mbox{\hyperlink{structcsv__handle__t}{csv\_handle\_t}}\ *a,\ \textcolor{keywordtype}{int}\ rbase\_a,\ \textcolor{keywordtype}{int}\ cbase\_a,\ \textcolor{keywordtype}{int}\ rows,\ \textcolor{keywordtype}{int}\ cols,\ \textcolor{keywordtype}{double}\ *data);}
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{csv__io_8h_aedb8680ec1d38d2d1f2c08fdc66c0642}{readCSVCell}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structcsv__handle__t}{csv\_handle\_t}}\ *handle,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *col\_char,\ \textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{char}\ *value,\ \textcolor{keywordtype}{int}\ length);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00047\ }
 
 \end{DoxyCode}

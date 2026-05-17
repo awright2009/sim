@@ -1,3 +1,16 @@
+/**
+ * @file csv_io.h
+ * @brief CSV file parsing and spreadsheet-style cell access utilities.
+ *
+ * This header provides functions for:
+ * - Loading CSV files into memory
+ * - Accessing CSV cells using spreadsheet-style coordinates
+ * - Extracting numeric arrays from CSV data
+ * - Converting between integer and base-26 column notation
+ *
+ * The API is designed for lightweight CSV parsing and data extraction.
+ */
+
 #ifndef CSV_IO
 #define CSV_IO
 

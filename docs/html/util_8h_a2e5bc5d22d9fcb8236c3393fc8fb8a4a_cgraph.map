@@ -1,0 +1,5 @@
+<map id="read_vehicle_data" name="read_vehicle_data">
+<area shape="rect" id="Node000001" title="Read vehicle configuration data from a CSV file." alt="" coords="5,5,132,31"/>
+<area shape="rect" id="Node000002" href="$types_8cpp.html#a2ea777458f76e1519a8072576ac64413" title="Convert a company name string to a company enumeration value." alt="" coords="180,5,309,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,15,167,15,167,21,132,21"/>
+</map>

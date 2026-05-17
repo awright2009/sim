@@ -1,3 +1,16 @@
+/**
+ * @file queue.h
+ * @brief Fixed-size byte queue implementation.
+ *
+ * This header defines a simple FIFO queue interface using a circular buffer.
+ * The queue supports:
+ * - Appending data to the tail
+ * - Inserting data at the front
+ * - Removing data from the head
+ * - Peeking at queued data without removal
+ * - Debug printing of queue contents
+ */
+
 #ifndef QUEUE_H
 #define QUEUE_H
 

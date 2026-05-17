@@ -1,3 +1,15 @@
+/**
+ * @file types.h
+ * @brief Common type definitions and simulation data structures.
+ *
+ * This header defines:
+ * - Enumerations for companies, vehicle states, and charger states
+ * - Runtime simulation data structures
+ * - Vehicle configuration data
+ * - Statistics tracking structures
+ * - String conversion helper functions
+ */
+
 #ifndef TYPES_H
 #define TYPES_H
 

@@ -1,3 +1,12 @@
+/**
+ * @file sim.h
+ * @brief Vehicle charging simulation engine.
+ *
+ * This header defines the main simulation class responsible for managing
+ * vehicle state transitions, charging station allocation, queue handling,
+ * and statistical tracking for a charging simulation environment.
+ */
+
 #ifndef SIM_H
 #define SIM_H
 

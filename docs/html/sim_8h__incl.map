@@ -1,0 +1,20 @@
+<map id="include/sim.h" name="include/sim.h">
+<area shape="rect" id="Node000001" title="Vehicle charging simulation engine." alt="" coords="171,5,269,31"/>
+<area shape="rect" id="Node000002" href="$types_8h.html" title="Common type definitions and simulation data structures." alt="" coords="117,79,182,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,33,172,71,168,67,206,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,67,177"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="184,33,139,52,95,81,69,110,50,141,45,138,65,107,92,77,136,48,182,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="95,152,159,177"/>
+<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="174,33,137,51,121,64,108,80,103,94,103,109,114,139,109,141,98,110,98,93,103,77,117,60,134,47,172,28"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="185,152,250,177"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="222,31,220,138,215,138,217,31"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="257,79,316,104"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="233,29,268,67,265,70,229,33"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="341,79,406,104"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="246,28,337,70,335,75,244,33"/>
+<area shape="rect" id="Node000008" href="$queue_8h.html" title="Fixed&#45;size byte queue implementation." alt="" coords="430,79,498,104"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="260,28,418,74,416,79,258,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="133,106,67,147,64,142,130,102"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="148,105,137,140,132,138,143,104"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="162,102,199,140,195,144,159,106"/>
+</map>

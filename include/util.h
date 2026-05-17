@@ -1,3 +1,12 @@
+/**
+ * @file util.h
+ * @brief Utility functions and simulation configuration constants.
+ *
+ * This header defines:
+ * - Default simulation configuration limits
+ * - CSV formatting constants
+ * - Utility functions for loading vehicle data and exporting statistics
+ */
 
 #ifndef UTIL_H
 #define UTIL_H
