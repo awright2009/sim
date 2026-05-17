@@ -116,16 +116,17 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">int</span> OpenCSV(<span class="keyword">const</span> <span class="keywordtype">char</span> *filename, <a class="code hl_struct" href="structcsv__handle__t.html">csv_handle_t</a> *handle);</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordtype">int</span> CloseCSV(<a class="code hl_struct" href="structcsv__handle__t.html">csv_handle_t</a> *handle);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keywordtype">void</span> IntToBase26(<span class="keywordtype">char</span> *output, <span class="keywordtype">int</span> pos);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordtype">int</span> Base26ToInt(<span class="keyword">const</span> <span class="keywordtype">char</span> *col_char);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">int</span> GetArray(<a class="code hl_struct" href="structcsv__handle__t.html">csv_handle_t</a> *a, <span class="keywordtype">int</span> rbase_a, <span class="keywordtype">int</span> cbase_a, <span class="keywordtype">int</span> rows, <span class="keywordtype">int</span> cols, <span class="keywordtype">double</span> *data);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keywordtype">int</span> readCSVCell(<span class="keyword">const</span> <a class="code hl_struct" href="structcsv__handle__t.html">csv_handle_t</a> *handle, <span class="keyword">const</span> <span class="keywordtype">char</span> *col_char, <span class="keywordtype">int</span> row, <span class="keywordtype">char</span> *value, <span class="keywordtype">int</span> length);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">char</span> *get_file(<span class="keyword">const</span> <span class="keywordtype">char</span> *filename, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> *size);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordtype">int</span> OpenCSV(<span class="keyword">const</span> <span class="keywordtype">char</span> *filename, <a class="code hl_struct" href="structcsv__handle__t.html">csv_handle_t</a> *handle);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keywordtype">int</span> CloseCSV(<a class="code hl_struct" href="structcsv__handle__t.html">csv_handle_t</a> *handle);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordtype">void</span> IntToBase26(<span class="keywordtype">char</span> *output, <span class="keywordtype">int</span> pos);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">int</span> Base26ToInt(<span class="keyword">const</span> <span class="keywordtype">char</span> *col_char);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keywordtype">int</span> GetArray(<a class="code hl_struct" href="structcsv__handle__t.html">csv_handle_t</a> *a, <span class="keywordtype">int</span> rbase_a, <span class="keywordtype">int</span> cbase_a, <span class="keywordtype">int</span> rows, <span class="keywordtype">int</span> cols, <span class="keywordtype">double</span> *data);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keywordtype">int</span> readCSVCell(<span class="keyword">const</span> <a class="code hl_struct" href="structcsv__handle__t.html">csv_handle_t</a> *handle, <span class="keyword">const</span> <span class="keywordtype">char</span> *col_char, <span class="keywordtype">int</span> row, <span class="keywordtype">char</span> *value, <span class="keywordtype">int</span> length);</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="ttc" id="astructcsv__handle__t_html"><div class="ttname"><a href="structcsv__handle__t.html">csv_handle_t</a></div><div class="ttdef"><b>Definition</b> csv_io.h:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

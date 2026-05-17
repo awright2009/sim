@@ -1,0 +1,18 @@
+<map id="sim::step_ground" name="sim::step_ground">
+<area shape="rect" id="Node000001" title="Process one grounded simulation step for a vehicle." alt="" coords="5,152,128,177"/>
+<area shape="rect" id="Node000002" href="$classsim.html#aae87544f1d073454738f4f8f65a44af6" title="Adds a vehicle to the charger queue if not already queued." alt="" coords="190,55,337,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,150,223,84,226,89,95,154"/>
+<area shape="rect" id="Node000005" href="$classsim.html#a5e4c1f3ca874f652ff4bde72c015623d" title="Processes the vehicle at the head of the charger queue." alt="" coords="176,152,351,177"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="128,162,162,162,162,167,128,167"/>
+<area shape="rect" id="Node000008" href="$classsim.html#a8c4abcb221b1129be4229dea7609024b" title="Attempts to assign a free charger to a vehicle." alt="" coords="399,203,561,228"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="116,175,176,187,284,201,385,208,385,214,284,206,176,193,115,180"/>
+<area shape="rect" id="Node000003" href="$queue_8cpp.html#a582391f0b9f7d1888fb0984d0c3dcd9f" title="Add data to the back of the queue." alt="" coords="445,5,515,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="319,52,431,26,432,32,320,57"/>
+<area shape="rect" id="Node000004" href="$queue_8cpp.html#af5bc88810b033ff91a00e9ecffd2b356" title="Print the current queue contents and state." alt="" coords="435,55,525,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="337,65,422,65,422,70,337,70"/>
+<area shape="rect" id="Node000006" href="$queue_8cpp.html#a56fbdf37b01e0a5787a9654c04dca6fe" title="Remove data from the front of the queue." alt="" coords="445,104,515,129"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="321,149,431,125,432,130,322,155"/>
+<area shape="rect" id="Node000007" href="$queue_8cpp.html#a9d0efb861861c451c0e00661807a38d3" title="Peek at queue data without removing it." alt="" coords="427,153,533,179"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="351,163,413,163,413,168,351,168"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="319,175,412,197,411,202,318,180"/>
+</map>

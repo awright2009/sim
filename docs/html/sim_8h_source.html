@@ -120,49 +120,57 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classsim.html#ab45dcd43dfcffda3e9792a6ecbd38763">step_airborne</a>(<span class="keywordtype">int</span> vehicle);</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classsim.html#a59fa98b8915d103611ff25ebd8595c4e">step_charging</a>(<span class="keywordtype">int</span> vehicle);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classsim.html#a343ed509f3097f994347ea04154add58">step_ground</a>(<span class="keywordtype">int</span> vehicle, <span class="keywordtype">bool</span> debug);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classsim.html#a7d9c65bef9f4510fb7abe9da6ecbd83e">step_ground</a>(<span class="keywordtype">int</span> vehicle);</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classsim.html#abe643430e5133d60e876a46a18513094">destroy</a>();</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">void</span> calculate_step_data();</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> update_stats();</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> print_charging();</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">bool</span> generate_fault(<span class="keywordtype">float</span> percentage);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_struct" href="structrun__state__t.html">run_state_t</a> *run_state;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_struct" href="structvehicle__data__t.html">vehicle_data_t</a> *vehicle_data; <span class="comment">// 20 total vehicles, of 5 types</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">int</span> num_vehicle;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classsim.html#a5e4c1f3ca874f652ff4bde72c015623d">process_queue_head</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> vehicle);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classsim.html#aae87544f1d073454738f4f8f65a44af6">enqueue_vehicle</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> vehicle);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classsim.html#a8c4abcb221b1129be4229dea7609024b">try_assign_charger</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> vehicle);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classsim.html#abe643430e5133d60e876a46a18513094">destroy</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> calculate_step_data();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">void</span> update_stats();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">void</span> print_charging();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">bool</span> generate_fault(<span class="keywordtype">float</span> percentage);</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_struct" href="structcharge__station__state__t.html">charge_station_state_t</a> *charge_station_state;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">int</span> num_charge_station;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_struct" href="structrun__state__t.html">run_state_t</a> *run_state;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_struct" href="structvehicle__data__t.html">vehicle_data_t</a> *vehicle_data; <span class="comment">// 20 total vehicles, of 5 types</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">int</span> num_vehicle;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">int</span> num_step;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_struct" href="structstats__t.html">stats_t</a> *stats;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">int</span> num_stat;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_struct" href="structqueue__t.html">queue_t</a> queue;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    std::mt19937 rng;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_struct" href="structcharge__station__state__t.html">charge_station_state_t</a> *charge_station_state;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">int</span> num_charge_station;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">int</span> num_step;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_struct" href="structstats__t.html">stats_t</a> *stats;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">int</span> num_stat;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">bool</span> initialized;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>};</div>
-</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_struct" href="structqueue__t.html">queue_t</a> queue;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    std::mt19937 rng;</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">bool</span> initialized;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">bool</span> debug;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>};</div>
+</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclasssim_html"><div class="ttname"><a href="classsim.html">sim</a></div><div class="ttdef"><b>Definition</b> sim.h:18</div></div>
-<div class="ttc" id="aclasssim_html_a288d45b6c6ee57bca1ac2306aceba1b8"><div class="ttname"><a href="classsim.html#a288d45b6c6ee57bca1ac2306aceba1b8">sim::~sim</a></div><div class="ttdeci">~sim()</div><div class="ttdoc">Destroy the simulation object.</div><div class="ttdef"><b>Definition</b> sim.cpp:36</div></div>
-<div class="ttc" id="aclasssim_html_a343ed509f3097f994347ea04154add58"><div class="ttname"><a href="classsim.html#a343ed509f3097f994347ea04154add58">sim::step_ground</a></div><div class="ttdeci">void step_ground(int vehicle, bool debug)</div><div class="ttdoc">Process one grounded simulation step for a vehicle.</div><div class="ttdef"><b>Definition</b> sim.cpp:248</div></div>
-<div class="ttc" id="aclasssim_html_a59fa98b8915d103611ff25ebd8595c4e"><div class="ttname"><a href="classsim.html#a59fa98b8915d103611ff25ebd8595c4e">sim::step_charging</a></div><div class="ttdeci">void step_charging(int vehicle)</div><div class="ttdoc">Process one charging simulation step for a vehicle.</div><div class="ttdef"><b>Definition</b> sim.cpp:392</div></div>
-<div class="ttc" id="aclasssim_html_a6cf19bf06affe3e5639597f9c3e2d95e"><div class="ttname"><a href="classsim.html#a6cf19bf06affe3e5639597f9c3e2d95e">sim::step</a></div><div class="ttdeci">void step()</div><div class="ttdoc">Execute one simulation step.</div><div class="ttdef"><b>Definition</b> sim.cpp:158</div></div>
+<div class="ttc" id="aclasssim_html_a288d45b6c6ee57bca1ac2306aceba1b8"><div class="ttname"><a href="classsim.html#a288d45b6c6ee57bca1ac2306aceba1b8">sim::~sim</a></div><div class="ttdeci">~sim()</div><div class="ttdoc">Destroy the simulation object.</div><div class="ttdef"><b>Definition</b> sim.cpp:38</div></div>
+<div class="ttc" id="aclasssim_html_a59fa98b8915d103611ff25ebd8595c4e"><div class="ttname"><a href="classsim.html#a59fa98b8915d103611ff25ebd8595c4e">sim::step_charging</a></div><div class="ttdeci">void step_charging(int vehicle)</div><div class="ttdoc">Process one charging simulation step for a vehicle.</div><div class="ttdef"><b>Definition</b> sim.cpp:412</div></div>
+<div class="ttc" id="aclasssim_html_a5e4c1f3ca874f652ff4bde72c015623d"><div class="ttname"><a href="classsim.html#a5e4c1f3ca874f652ff4bde72c015623d">sim::process_queue_head</a></div><div class="ttdeci">bool process_queue_head(unsigned int vehicle)</div><div class="ttdoc">Processes the vehicle at the head of the charger queue.</div><div class="ttdef"><b>Definition</b> sim.cpp:374</div></div>
+<div class="ttc" id="aclasssim_html_a6cf19bf06affe3e5639597f9c3e2d95e"><div class="ttname"><a href="classsim.html#a6cf19bf06affe3e5639597f9c3e2d95e">sim::step</a></div><div class="ttdeci">void step()</div><div class="ttdoc">Execute one simulation step.</div><div class="ttdef"><b>Definition</b> sim.cpp:160</div></div>
 <div class="ttc" id="aclasssim_html_a78390ab37b6e55a744705c44d132dbbd"><div class="ttname"><a href="classsim.html#a78390ab37b6e55a744705c44d132dbbd">sim::sim</a></div><div class="ttdeci">sim()</div><div class="ttdoc">Construct a new simulation object.</div><div class="ttdef"><b>Definition</b> sim.cpp:14</div></div>
-<div class="ttc" id="aclasssim_html_a9fcfcbb706cd13165039d44a6122fba7"><div class="ttname"><a href="classsim.html#a9fcfcbb706cd13165039d44a6122fba7">sim::init</a></div><div class="ttdeci">void init(const vehicle_data_t *types, int num_type, stats_t *stats, int num_stat, int num_charger)</div><div class="ttdoc">Initialize the simulation.</div><div class="ttdef"><b>Definition</b> sim.cpp:59</div></div>
-<div class="ttc" id="aclasssim_html_ab45dcd43dfcffda3e9792a6ecbd38763"><div class="ttname"><a href="classsim.html#ab45dcd43dfcffda3e9792a6ecbd38763">sim::step_airborne</a></div><div class="ttdeci">void step_airborne(int vehicle)</div><div class="ttdoc">Process one airborne simulation step for a vehicle.</div><div class="ttdef"><b>Definition</b> sim.cpp:217</div></div>
-<div class="ttc" id="aclasssim_html_abe643430e5133d60e876a46a18513094"><div class="ttname"><a href="classsim.html#abe643430e5133d60e876a46a18513094">sim::destroy</a></div><div class="ttdeci">void destroy()</div><div class="ttdoc">Destroy simulation resources.</div><div class="ttdef"><b>Definition</b> sim.cpp:510</div></div>
+<div class="ttc" id="aclasssim_html_a7d9c65bef9f4510fb7abe9da6ecbd83e"><div class="ttname"><a href="classsim.html#a7d9c65bef9f4510fb7abe9da6ecbd83e">sim::step_ground</a></div><div class="ttdeci">void step_ground(int vehicle)</div><div class="ttdoc">Process one grounded simulation step for a vehicle.</div><div class="ttdef"><b>Definition</b> sim.cpp:250</div></div>
+<div class="ttc" id="aclasssim_html_a8c4abcb221b1129be4229dea7609024b"><div class="ttname"><a href="classsim.html#a8c4abcb221b1129be4229dea7609024b">sim::try_assign_charger</a></div><div class="ttdeci">bool try_assign_charger(unsigned int vehicle)</div><div class="ttdoc">Attempts to assign a free charger to a vehicle.</div><div class="ttdef"><b>Definition</b> sim.cpp:295</div></div>
+<div class="ttc" id="aclasssim_html_a9fcfcbb706cd13165039d44a6122fba7"><div class="ttname"><a href="classsim.html#a9fcfcbb706cd13165039d44a6122fba7">sim::init</a></div><div class="ttdeci">void init(const vehicle_data_t *types, int num_type, stats_t *stats, int num_stat, int num_charger)</div><div class="ttdoc">Initialize the simulation.</div><div class="ttdef"><b>Definition</b> sim.cpp:61</div></div>
+<div class="ttc" id="aclasssim_html_aae87544f1d073454738f4f8f65a44af6"><div class="ttname"><a href="classsim.html#aae87544f1d073454738f4f8f65a44af6">sim::enqueue_vehicle</a></div><div class="ttdeci">void enqueue_vehicle(unsigned int vehicle)</div><div class="ttdoc">Adds a vehicle to the charger queue if not already queued.</div><div class="ttdef"><b>Definition</b> sim.cpp:329</div></div>
+<div class="ttc" id="aclasssim_html_ab45dcd43dfcffda3e9792a6ecbd38763"><div class="ttname"><a href="classsim.html#ab45dcd43dfcffda3e9792a6ecbd38763">sim::step_airborne</a></div><div class="ttdeci">void step_airborne(int vehicle)</div><div class="ttdoc">Process one airborne simulation step for a vehicle.</div><div class="ttdef"><b>Definition</b> sim.cpp:219</div></div>
+<div class="ttc" id="aclasssim_html_abe643430e5133d60e876a46a18513094"><div class="ttname"><a href="classsim.html#abe643430e5133d60e876a46a18513094">sim::destroy</a></div><div class="ttdeci">void destroy()</div><div class="ttdoc">Destroy simulation resources.</div><div class="ttdef"><b>Definition</b> sim.cpp:530</div></div>
 <div class="ttc" id="astructcharge__station__state__t_html"><div class="ttname"><a href="structcharge__station__state__t.html">charge_station_state_t</a></div><div class="ttdef"><b>Definition</b> types.h:56</div></div>
 <div class="ttc" id="astructqueue__t_html"><div class="ttname"><a href="structqueue__t.html">queue_t</a></div><div class="ttdef"><b>Definition</b> queue.h:7</div></div>
 <div class="ttc" id="astructrun__state__t_html"><div class="ttname"><a href="structrun__state__t.html">run_state_t</a></div><div class="ttdef"><b>Definition</b> types.h:45</div></div>

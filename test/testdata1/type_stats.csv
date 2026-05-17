@@ -1,0 +1,6 @@
+Type, avg_time_per_flight, avg_dist_per_flight, avg_time_charging_per_charge_session, total_faults, passenger_miles
+ALPHA,	0.000000, 0.000000, 0.000000, 0, 0
+BRAVO,	10.078889, 1007.888916, 0.999722, 1, 7256800
+CHARLIE,	0.000000, 0.000000, 0.000000, 0, 0
+DELTA,	0.000000, 0.000000, 0.000000, 0, 0
+ECHO,	0.000000, 0.000000, 0.000000, 0, 0

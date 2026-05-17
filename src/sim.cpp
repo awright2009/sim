@@ -23,6 +23,8 @@ sim::sim()
 	num_charge_station = 0;
 	num_step = 0;
 
+	debug = false;
+
 	memset(&queue, 0, sizeof(queue_t));
 }
 
@@ -186,7 +188,7 @@ void sim::step()
 			step_airborne(i);
 			break;
 		case GROUND:
-			step_ground(i, false);
+			step_ground(i);
 			break;
 		case CHARGING:
 			step_charging(i);
@@ -245,139 +247,157 @@ void sim::step_airborne(int vehicle)
 * @param vehicle Vehicle index.
 * @param debug Enable verbose debug printing.
 */
-void sim::step_ground(int vehicle, bool debug)
+void sim::step_ground(int vehicle)
 {
 	// line for chargers is empty, so just take the first available
 	if (queue.size == 0)
 	{
-		int j = 0;
-
 		// check charging stations if one is free, then take it
-		for (j = 0; j < num_charge_station; j++)
+		if (try_assign_charger(vehicle))
 		{
-			if (charge_station_state[j].charger_state == FREE)
-			{
-				// update charger state
-				charge_station_state[j].charger_state = OCCUPIED;
-				charge_station_state[j].charging_vehicle = vehicle;
-
-				// update vehicle state
-				run_state[vehicle].vehicle_state = CHARGING;
-				run_state[vehicle].vehicle_charger = j;
-
-				// exit loop since we have a charger
-				break;
-			}
+        		return;
 		}
-
-		if (j == num_charge_station)
+		else
 		{
-			// queue is really for string data, should really convert char to integer, but 0-255 is enough for our case
-			unsigned char data = vehicle;
-
 			// all chargers are full, join queue and set in_line bool
-			if (debug)
-			{
-				printf("\tVehicle %d entering charger queue\r\n", vehicle);
-			}
-			enqueue(&queue, &data, 1);
-
-			run_state[vehicle].in_line = true;
-
-			if (debug)
-			{
-				print_queue(&queue);
-				print_charging();
-			}
-
+			enqueue_vehicle(vehicle);
 		}
-
 	}
 	else
 	{
+
 		// we have a line, check to see if we are at the head of the queue
-		unsigned char data;
-		dequeue_peek(&queue, &data, 1);
-
-		if ((int)data == vehicle)
-		{
-			// we are first in line, check for a free station
-			for (int j = 0; j < num_charge_station; j++)
-			{
-				if (charge_station_state[j].charger_state == FREE)
-				{
-					// update charger state
-					charge_station_state[j].charger_state = OCCUPIED;
-					charge_station_state[j].charging_vehicle = vehicle;
-
-					// update vehicle state
-					run_state[vehicle].vehicle_state = CHARGING;
-					run_state[vehicle].vehicle_charger = j;
-
-
-					// Update Queue and in_line bool
-					if (debug)
-					{
-						print_queue(&queue);
-						print_charging();
-					}
-
-					// now remove ourselves from the queue for real this time
-					dequeue(&queue, &data, 1);
-
-					if (vehicle != (int)data)
-					{
-						printf("Error: peek didn't match dequeue\r\n");
-						exit(0);
-					}
-
-					if (debug)
-					{
-						printf("\tVehicle %d exiting queue\r\n", data);
-					}
-					run_state[vehicle].in_line = false;
-
-					if (debug)
-					{
-						print_queue(&queue);
-						print_charging();
-					}
-
-					// exit loop since we have a charger
-					break;
-				}
-			}
-		}
-		else
+		if ( process_queue_head(vehicle) == false)
 		{
 			// we are on the ground
 			// there is a line already and we are not first in line
 			// so that means chargers are full and we can't take one yet
 			// But we need to join the line (if we haven't already)
-
-			if (run_state[vehicle].in_line == false)
-			{
-				run_state[vehicle].in_line = true;
-
-				// queue is really for string data, should really convert char to integer, but 0-255 is enough for our case
-				unsigned char data = vehicle;
-
-				// all chargers are full, join queue
-				if (debug)
-				{
-					printf("Vehicle %d entering charger queue\r\n", vehicle);
-				}
-				enqueue(&queue, &data, 1);
-
-				if (debug)
-				{
-					print_queue(&queue);
-					print_charging();
-				}
-			}
-
+			enqueue_vehicle(vehicle);
 		}
 	}
+}
+
+/**
+ * @brief Attempts to assign a free charger to a vehicle.
+ *
+ * Iterates through all charging stations searching for an available
+ * charger. If a free charger is found, the charger state is updated
+ * to occupied and assigned to the specified vehicle. The vehicle
+ * runtime state is also updated to indicate that it is currently
+ * charging.
+ *
+ * @param vehicle Index of the vehicle requesting a charger.
+ *
+ * @return true  A charger was successfully assigned to the vehicle.
+ * @return false No chargers were available.
+ */
+bool sim::try_assign_charger(unsigned int vehicle)
+{
+	for (int i = 0; i < num_charge_station; i++)
+	{
+		if (charge_station_state[i].charger_state == FREE)
+		{
+			// update charger state
+			charge_station_state[i].charger_state = OCCUPIED;
+			charge_station_state[i].charging_vehicle = vehicle;
+
+			// update vehicle state
+			run_state[vehicle].vehicle_state = CHARGING;
+			run_state[vehicle].vehicle_charger = i;
+			return true;
+		}
+	}
+
+
+	return false;
+}
+
+/**
+ * @brief Adds a vehicle to the charger queue if not already queued.
+ *
+ * Checks whether the specified vehicle is already waiting in the
+ * charging queue. If not, the vehicle is appended to the FIFO queue
+ * and its runtime state is updated to indicate that it is currently
+ * waiting in line for a charger.
+ *
+ * When debug output is enabled, queue activity and charger status
+ * information are printed to the console.
+ *
+ * @param vehicle Index of the vehicle to enqueue.
+ */
+void sim::enqueue_vehicle(unsigned int vehicle)
+{
+	if (run_state[vehicle].in_line == false)
+	{
+		unsigned char data = vehicle;
+
+		// all chargers are full, join queue and set in_line bool
+		if (debug)
+		{
+			printf("\tVehicle %d entering charger queue\r\n", vehicle);
+		}
+
+		enqueue(&queue, &data, 1);
+		run_state[vehicle].in_line = true;
+
+		if (debug)
+		{
+			print_queue(&queue);
+			print_charging();
+		}
+	}
+}
+
+
+/**
+ * @brief Processes the vehicle at the head of the charger queue.
+ *
+ * Checks whether the specified vehicle is currently first in the
+ * charger queue. If the vehicle is not at the front of the queue,
+ * the function returns immediately.
+ *
+ * If the vehicle is first in line, the function attempts to assign
+ * an available charger using try_assign_charger(). Upon successful
+ * charger assignment, the vehicle is removed from the queue and its
+ * queue state flag is cleared.
+ *
+ * A runtime consistency check validates that the dequeued vehicle
+ * matches the expected vehicle. The program terminates if a queue
+ * mismatch is detected.
+ *
+ * @param vehicle Index of the vehicle attempting to acquire a charger.
+ *
+ * @return true  Vehicle was at the head of the queue.
+ * @return false Vehicle was not at the head of the queue.
+ */
+bool sim::process_queue_head(unsigned int vehicle)
+{
+	unsigned char queued_vehicle;
+	dequeue_peek(&queue, &queued_vehicle, 1);
+
+	if (queued_vehicle != vehicle)
+	{
+        	return false;
+	}
+
+	// we are first in line, check for a free station
+	if (try_assign_charger(vehicle))
+	{
+		unsigned char dequeued_vehicle;
+
+		dequeue(&queue, &dequeued_vehicle, 1);
+
+		if (dequeued_vehicle != vehicle)
+		{
+    			fprintf(stderr, "Queue mismatch error\n");
+			exit(EXIT_FAILURE);
+		}
+
+		run_state[vehicle].in_line = false;
+	}
+
+	return true;
 }
 
 /**

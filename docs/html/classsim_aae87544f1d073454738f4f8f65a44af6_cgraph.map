@@ -1,0 +1,7 @@
+<map id="sim::enqueue_vehicle" name="sim::enqueue_vehicle">
+<area shape="rect" id="Node000001" title="Adds a vehicle to the charger queue if not already queued." alt="" coords="5,31,152,56"/>
+<area shape="rect" id="Node000002" href="$queue_8cpp.html#a582391f0b9f7d1888fb0984d0c3dcd9f" title="Add data to the back of the queue." alt="" coords="209,5,280,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,30,195,23,196,28,153,35"/>
+<area shape="rect" id="Node000003" href="$queue_8cpp.html#af5bc88810b033ff91a00e9ecffd2b356" title="Print the current queue contents and state." alt="" coords="200,55,289,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="153,51,187,56,186,62,152,57"/>
+</map>

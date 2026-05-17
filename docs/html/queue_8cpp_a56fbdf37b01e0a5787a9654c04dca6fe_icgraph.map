@@ -1,9 +1,11 @@
 <map id="dequeue" name="dequeue">
-<area shape="rect" id="Node000001" title="Remove data from the front of the queue." alt="" coords="399,5,469,31"/>
-<area shape="rect" id="Node000002" href="$classsim.html#a343ed509f3097f994347ea04154add58" title="Process one grounded simulation step for a vehicle." alt="" coords="228,5,351,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="385,21,351,21,351,15,385,15"/>
-<area shape="rect" id="Node000003" href="$classsim.html#a6cf19bf06affe3e5639597f9c3e2d95e" title="Execute one simulation step." alt="" coords="104,5,180,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="215,21,180,21,180,15,215,15"/>
-<area shape="rect" id="Node000004" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Program entry point." alt="" coords="5,5,56,31"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="90,21,56,21,56,15,90,15"/>
+<area shape="rect" id="Node000001" title="Remove data from the front of the queue." alt="" coords="621,5,692,31"/>
+<area shape="rect" id="Node000002" href="$classsim.html#a5e4c1f3ca874f652ff4bde72c015623d" title="Processes the vehicle at the head of the charger queue." alt="" coords="399,5,573,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="607,21,573,21,573,15,607,15"/>
+<area shape="rect" id="Node000003" href="$classsim.html#a7d9c65bef9f4510fb7abe9da6ecbd83e" title="Process one grounded simulation step for a vehicle." alt="" coords="228,5,351,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="385,21,351,21,351,15,385,15"/>
+<area shape="rect" id="Node000004" href="$classsim.html#a6cf19bf06affe3e5639597f9c3e2d95e" title="Execute one simulation step." alt="" coords="104,5,180,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="215,21,180,21,180,15,215,15"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Program entry point." alt="" coords="5,5,56,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="90,21,56,21,56,15,90,15"/>
 </map>

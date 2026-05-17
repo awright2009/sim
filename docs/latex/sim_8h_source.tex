@@ -30,38 +30,43 @@
 \DoxyCodeLine{00026\ }
 \DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsim_ab45dcd43dfcffda3e9792a6ecbd38763}{step\_airborne}}(\textcolor{keywordtype}{int}\ vehicle);}
 \DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsim_a59fa98b8915d103611ff25ebd8595c4e}{step\_charging}}(\textcolor{keywordtype}{int}\ vehicle);}
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsim_a343ed509f3097f994347ea04154add58}{step\_ground}}(\textcolor{keywordtype}{int}\ vehicle,\ \textcolor{keywordtype}{bool}\ debug);}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsim_a7d9c65bef9f4510fb7abe9da6ecbd83e}{step\_ground}}(\textcolor{keywordtype}{int}\ vehicle);}
 \DoxyCodeLine{00030\ }
-\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsim_abe643430e5133d60e876a46a18513094}{destroy}}();}
-\DoxyCodeLine{00032\ }
-\DoxyCodeLine{00033\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ calculate\_step\_data();}
-\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ update\_stats();}
-\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ print\_charging();}
-\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{bool}\ generate\_fault(\textcolor{keywordtype}{float}\ percentage);}
-\DoxyCodeLine{00038\ }
-\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{structrun__state__t}{run\_state\_t}}\ *run\_state;}
-\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{structvehicle__data__t}{vehicle\_data\_t}}\ *vehicle\_data;\ \textcolor{comment}{//\ 20\ total\ vehicles,\ of\ 5\ types}}
-\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{int}\ num\_vehicle;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classsim_a5e4c1f3ca874f652ff4bde72c015623d}{process\_queue\_head}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ vehicle);}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsim_aae87544f1d073454738f4f8f65a44af6}{enqueue\_vehicle}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ vehicle);}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classsim_a8c4abcb221b1129be4229dea7609024b}{try\_assign\_charger}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ vehicle);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsim_abe643430e5133d60e876a46a18513094}{destroy}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ calculate\_step\_data();}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ update\_stats();}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ print\_charging();}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{bool}\ generate\_fault(\textcolor{keywordtype}{float}\ percentage);}
 \DoxyCodeLine{00042\ }
-\DoxyCodeLine{00043\ }
-\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{structcharge__station__state__t}{charge\_station\_state\_t}}\ *charge\_station\_state;}
-\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{int}\ num\_charge\_station;}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{structrun__state__t}{run\_state\_t}}\ *run\_state;}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{structvehicle__data__t}{vehicle\_data\_t}}\ *vehicle\_data;\ \textcolor{comment}{//\ 20\ total\ vehicles,\ of\ 5\ types}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{int}\ num\_vehicle;}
 \DoxyCodeLine{00046\ }
-\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{int}\ num\_step;}
-\DoxyCodeLine{00048\ \ \ \ \ }
-\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{structstats__t}{stats\_t}}\ *stats;}
-\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{int}\ num\_stat;}
-\DoxyCodeLine{00051\ }
-\DoxyCodeLine{00052\ }
-\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{structqueue__t}{queue\_t}}\ queue;}
-\DoxyCodeLine{00054\ }
-\DoxyCodeLine{00055\ \ \ \ \ std::mt19937\ rng;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{structcharge__station__state__t}{charge\_station\_state\_t}}\ *charge\_station\_state;}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{int}\ num\_charge\_station;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{int}\ num\_step;}
+\DoxyCodeLine{00052\ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{structstats__t}{stats\_t}}\ *stats;}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{int}\ num\_stat;}
+\DoxyCodeLine{00055\ }
 \DoxyCodeLine{00056\ }
-\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{bool}\ initialized;}
-\DoxyCodeLine{00058\ \};}
-\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{structqueue__t}{queue\_t}}\ queue;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ std::mt19937\ rng;}
 \DoxyCodeLine{00060\ }
-\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{bool}\ initialized;}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{bool}\ debug;}
+\DoxyCodeLine{00063\ \};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

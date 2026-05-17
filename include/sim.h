@@ -26,7 +26,11 @@ public:
 
 	void step_airborne(int vehicle);
 	void step_charging(int vehicle);
-	void step_ground(int vehicle, bool debug);
+	void step_ground(int vehicle);
+
+	bool process_queue_head(unsigned int vehicle);
+	void enqueue_vehicle(unsigned int vehicle);
+	bool try_assign_charger(unsigned int vehicle);
 
 	void destroy();
 
@@ -55,6 +59,7 @@ private:
 	std::mt19937 rng;
 
 	bool initialized;
+	bool debug;
 };
 
 

@@ -15,8 +15,14 @@ void \mbox{\hyperlink{classsim_ab45dcd43dfcffda3e9792a6ecbd38763}{step\+\_\+airb
 \begin{DoxyCompactList}\small\item\em Process one airborne simulation step for a vehicle. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classsim_a59fa98b8915d103611ff25ebd8595c4e}{step\+\_\+charging}} (int vehicle)
 \begin{DoxyCompactList}\small\item\em Process one charging simulation step for a vehicle. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classsim_a343ed509f3097f994347ea04154add58}{step\+\_\+ground}} (int vehicle, bool debug)
+void \mbox{\hyperlink{classsim_a7d9c65bef9f4510fb7abe9da6ecbd83e}{step\+\_\+ground}} (int vehicle)
 \begin{DoxyCompactList}\small\item\em Process one grounded simulation step for a vehicle. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsim_a5e4c1f3ca874f652ff4bde72c015623d}{process\+\_\+queue\+\_\+head}} (unsigned int vehicle)
+\begin{DoxyCompactList}\small\item\em Processes the vehicle at the head of the charger queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsim_aae87544f1d073454738f4f8f65a44af6}{enqueue\+\_\+vehicle}} (unsigned int vehicle)
+\begin{DoxyCompactList}\small\item\em Adds a vehicle to the charger queue if not already queued. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsim_a8c4abcb221b1129be4229dea7609024b}{try\+\_\+assign\+\_\+charger}} (unsigned int vehicle)
+\begin{DoxyCompactList}\small\item\em Attempts to assign a free charger to a vehicle. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classsim_abe643430e5133d60e876a46a18513094}{destroy}} ()
 \begin{DoxyCompactList}\small\item\em Destroy simulation resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -42,8 +48,7 @@ sim\+::\texorpdfstring{$\sim$}{\string~}sim (\begin{DoxyParamCaption}{}{}\end{Do
 
 Destroy the simulation object. 
 
-Frees all dynamically allocated resources if the simulation was previously initialized. Here is the call graph for this function\+:
-\nopagebreak
+Frees all dynamically allocated resources if the simulation was previously initialized. Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -63,12 +68,46 @@ void sim\+::destroy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 Destroy simulation resources. 
 
-Frees all dynamically allocated memory associated with vehicles and charging stations. Here is the caller graph for this function\+:
-\nopagebreak
+Frees all dynamically allocated memory associated with vehicles and charging stations. Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=247pt]{classsim_abe643430e5133d60e876a46a18513094_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsim_aae87544f1d073454738f4f8f65a44af6}\index{sim@{sim}!enqueue\_vehicle@{enqueue\_vehicle}}
+\index{enqueue\_vehicle@{enqueue\_vehicle}!sim@{sim}}
+\doxysubsubsection{\texorpdfstring{enqueue\_vehicle()}{enqueue\_vehicle()}}
+{\footnotesize\ttfamily \label{classsim_aae87544f1d073454738f4f8f65a44af6} 
+void sim\+::enqueue\+\_\+vehicle (\begin{DoxyParamCaption}\item[{unsigned int}]{vehicle}{}\end{DoxyParamCaption})}
+
+
+
+Adds a vehicle to the charger queue if not already queued. 
+
+Checks whether the specified vehicle is already waiting in the charging queue. If not, the vehicle is appended to the FIFO queue and its runtime state is updated to indicate that it is currently waiting in line for a charger.
+
+When debug output is enabled, queue activity and charger status information are printed to the console.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vehicle} & Index of the vehicle to enqueue. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{classsim_aae87544f1d073454738f4f8f65a44af6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsim_aae87544f1d073454738f4f8f65a44af6_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{classsim_a9fcfcbb706cd13165039d44a6122fba7}\index{sim@{sim}!init@{init}}
@@ -98,12 +137,53 @@ Also initializes random number generators and calculates per-\/step runtime valu
 {\em num\+\_\+charger} & Number of available charging stations. \\
 \hline
 \end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classsim_a9fcfcbb706cd13165039d44a6122fba7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsim_a5e4c1f3ca874f652ff4bde72c015623d}\index{sim@{sim}!process\_queue\_head@{process\_queue\_head}}
+\index{process\_queue\_head@{process\_queue\_head}!sim@{sim}}
+\doxysubsubsection{\texorpdfstring{process\_queue\_head()}{process\_queue\_head()}}
+{\footnotesize\ttfamily \label{classsim_a5e4c1f3ca874f652ff4bde72c015623d} 
+bool sim\+::process\+\_\+queue\+\_\+head (\begin{DoxyParamCaption}\item[{unsigned int}]{vehicle}{}\end{DoxyParamCaption})}
+
+
+
+Processes the vehicle at the head of the charger queue. 
+
+Checks whether the specified vehicle is currently first in the charger queue. If the vehicle is not at the front of the queue, the function returns immediately.
+
+If the vehicle is first in line, the function attempts to assign an available charger using \doxylink{classsim_a8c4abcb221b1129be4229dea7609024b}{try\+\_\+assign\+\_\+charger()}. Upon successful charger assignment, the vehicle is removed from the queue and its queue state flag is cleared.
+
+A runtime consistency check validates that the dequeued vehicle matches the expected vehicle. The program terminates if a queue mismatch is detected.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vehicle} & Index of the vehicle attempting to acquire a charger.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Vehicle was at the head of the queue. 
+
+false Vehicle was not at the head of the queue. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsim_a5e4c1f3ca874f652ff4bde72c015623d_cgraph}
+\end{center}
+\end{figure}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=205pt]{classsim_a9fcfcbb706cd13165039d44a6122fba7_icgraph}
+\includegraphics[width=350pt]{classsim_a5e4c1f3ca874f652ff4bde72c015623d_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{classsim_a6cf19bf06affe3e5639597f9c3e2d95e}\index{sim@{sim}!step@{step}}
@@ -124,8 +204,7 @@ Advances all vehicles by one simulation tick, updates charger states, processes 
 \includegraphics[width=350pt]{classsim_a6cf19bf06affe3e5639597f9c3e2d95e_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -149,8 +228,7 @@ Consumes battery energy while the vehicle is airborne. If the battery is deplete
 {\em vehicle} & Vehicle index. \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -174,19 +252,18 @@ Charges the vehicle battery incrementally until full. Once fully charged, the ve
 {\em vehicle} & Vehicle index. \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=346pt]{classsim_a59fa98b8915d103611ff25ebd8595c4e_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{classsim_a343ed509f3097f994347ea04154add58}\index{sim@{sim}!step\_ground@{step\_ground}}
+\Hypertarget{classsim_a7d9c65bef9f4510fb7abe9da6ecbd83e}\index{sim@{sim}!step\_ground@{step\_ground}}
 \index{step\_ground@{step\_ground}!sim@{sim}}
 \doxysubsubsection{\texorpdfstring{step\_ground()}{step\_ground()}}
-{\footnotesize\ttfamily \label{classsim_a343ed509f3097f994347ea04154add58} 
-void sim\+::step\+\_\+ground (\begin{DoxyParamCaption}\item[{int}]{vehicle}{, }\item[{bool}]{debug}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classsim_a7d9c65bef9f4510fb7abe9da6ecbd83e} 
+void sim\+::step\+\_\+ground (\begin{DoxyParamCaption}\item[{int}]{vehicle}{}\end{DoxyParamCaption})}
 
 
 
@@ -206,7 +283,7 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=288pt]{classsim_a343ed509f3097f994347ea04154add58_cgraph}
+\includegraphics[width=350pt]{classsim_a7d9c65bef9f4510fb7abe9da6ecbd83e_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -214,7 +291,37 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=339pt]{classsim_a343ed509f3097f994347ea04154add58_icgraph}
+\includegraphics[width=339pt]{classsim_a7d9c65bef9f4510fb7abe9da6ecbd83e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsim_a8c4abcb221b1129be4229dea7609024b}\index{sim@{sim}!try\_assign\_charger@{try\_assign\_charger}}
+\index{try\_assign\_charger@{try\_assign\_charger}!sim@{sim}}
+\doxysubsubsection{\texorpdfstring{try\_assign\_charger()}{try\_assign\_charger()}}
+{\footnotesize\ttfamily \label{classsim_a8c4abcb221b1129be4229dea7609024b} 
+bool sim\+::try\+\_\+assign\+\_\+charger (\begin{DoxyParamCaption}\item[{unsigned int}]{vehicle}{}\end{DoxyParamCaption})}
+
+
+
+Attempts to assign a free charger to a vehicle. 
+
+Iterates through all charging stations searching for an available charger. If a free charger is found, the charger state is updated to occupied and assigned to the specified vehicle. The vehicle runtime state is also updated to indicate that it is currently charging.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vehicle} & Index of the vehicle requesting a charger.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true A charger was successfully assigned to the vehicle. 
+
+false No chargers were available. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsim_a8c4abcb221b1129be4229dea7609024b_icgraph}
 \end{center}
 \end{figure}
 

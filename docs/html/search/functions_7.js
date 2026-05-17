@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vehicle_5fstate_5fe_5fto_5fstr_0',['vehicle_state_e_to_str',['../types_8cpp.html#a2a45b0ae4928ad008112ffb14bbe30a3',1,'types.cpp']]]
+  ['try_5fassign_5fcharger_0',['try_assign_charger',['../classsim.html#a8c4abcb221b1129be4229dea7609024b',1,'sim']]]
 ];

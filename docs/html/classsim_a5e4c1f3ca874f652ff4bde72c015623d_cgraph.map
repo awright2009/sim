@@ -1,0 +1,9 @@
+<map id="sim::process_queue_head" name="sim::process_queue_head">
+<area shape="rect" id="Node000001" title="Processes the vehicle at the head of the charger queue." alt="" coords="5,55,180,80"/>
+<area shape="rect" id="Node000002" href="$queue_8cpp.html#a56fbdf37b01e0a5787a9654c04dca6fe" title="Remove data from the front of the queue." alt="" coords="274,5,345,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,52,260,26,261,32,150,57"/>
+<area shape="rect" id="Node000003" href="$queue_8cpp.html#a9d0efb861861c451c0e00661807a38d3" title="Peek at queue data without removing it." alt="" coords="256,55,363,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,65,242,65,242,70,180,70"/>
+<area shape="rect" id="Node000004" href="$classsim.html#a8c4abcb221b1129be4229dea7609024b" title="Attempts to assign a free charger to a vehicle." alt="" coords="228,104,391,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="150,77,240,98,239,104,149,83"/>
+</map>

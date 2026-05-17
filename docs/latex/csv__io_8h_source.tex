@@ -25,15 +25,16 @@
 \DoxyCodeLine{00021\ \}\ \mbox{\hyperlink{structcsv__handle__t}{csv\_handle\_t}};}
 \DoxyCodeLine{00022\ }
 \DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \textcolor{keywordtype}{int}\ OpenCSV(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filename,\ \mbox{\hyperlink{structcsv__handle__t}{csv\_handle\_t}}\ *handle);}
-\DoxyCodeLine{00025\ \textcolor{keywordtype}{int}\ CloseCSV(\mbox{\hyperlink{structcsv__handle__t}{csv\_handle\_t}}\ *handle);}
-\DoxyCodeLine{00026\ \textcolor{keywordtype}{void}\ IntToBase26(\textcolor{keywordtype}{char}\ *output,\ \textcolor{keywordtype}{int}\ pos);}
-\DoxyCodeLine{00027\ \textcolor{keywordtype}{int}\ Base26ToInt(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *col\_char);}
-\DoxyCodeLine{00028\ \textcolor{keywordtype}{int}\ GetArray(\mbox{\hyperlink{structcsv__handle__t}{csv\_handle\_t}}\ *a,\ \textcolor{keywordtype}{int}\ rbase\_a,\ \textcolor{keywordtype}{int}\ cbase\_a,\ \textcolor{keywordtype}{int}\ rows,\ \textcolor{keywordtype}{int}\ cols,\ \textcolor{keywordtype}{double}\ *data);}
-\DoxyCodeLine{00029\ \textcolor{keywordtype}{int}\ readCSVCell(\textcolor{keyword}{const}\ \mbox{\hyperlink{structcsv__handle__t}{csv\_handle\_t}}\ *handle,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *col\_char,\ \textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{char}\ *value,\ \textcolor{keywordtype}{int}\ length);}
-\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{char}\ *get\_file(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filename,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *size);}
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{int}\ OpenCSV(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filename,\ \mbox{\hyperlink{structcsv__handle__t}{csv\_handle\_t}}\ *handle);}
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{int}\ CloseCSV(\mbox{\hyperlink{structcsv__handle__t}{csv\_handle\_t}}\ *handle);}
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ IntToBase26(\textcolor{keywordtype}{char}\ *output,\ \textcolor{keywordtype}{int}\ pos);}
+\DoxyCodeLine{00028\ \textcolor{keywordtype}{int}\ Base26ToInt(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *col\_char);}
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{int}\ GetArray(\mbox{\hyperlink{structcsv__handle__t}{csv\_handle\_t}}\ *a,\ \textcolor{keywordtype}{int}\ rbase\_a,\ \textcolor{keywordtype}{int}\ cbase\_a,\ \textcolor{keywordtype}{int}\ rows,\ \textcolor{keywordtype}{int}\ cols,\ \textcolor{keywordtype}{double}\ *data);}
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{int}\ readCSVCell(\textcolor{keyword}{const}\ \mbox{\hyperlink{structcsv__handle__t}{csv\_handle\_t}}\ *handle,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *col\_char,\ \textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{char}\ *value,\ \textcolor{keywordtype}{int}\ length);}
 \DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00034\ }
 
 \end{DoxyCode}
