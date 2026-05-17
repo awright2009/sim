@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
 		return 0;
 	}
 
-	float num_hours_to_simulate = atof(argv[1]);
+	float num_hours_to_simulate = (float)atof(argv[1]);
 	if (num_hours_to_simulate < 0.0f)
 	{
 		printf("Invalid input, negative time\r\n");
