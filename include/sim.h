@@ -20,10 +20,11 @@ public:
 	sim();
 	~sim();
 
-
 	void init(const vehicle_data_t *types, int num_type, stats_t *stats, int num_stat, int num_charger);
 	void step();
+	void destroy();
 
+private:
 	void step_airborne(int vehicle);
 	void step_charging(int vehicle);
 	void step_ground(int vehicle);
@@ -32,9 +33,6 @@ public:
 	void enqueue_vehicle(unsigned int vehicle);
 	bool try_assign_charger(unsigned int vehicle);
 
-	void destroy();
-
-private:
 	void calculate_step_data();
 	void update_stats();
 	void print_charging();
